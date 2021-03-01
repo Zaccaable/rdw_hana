@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models::cv_gebreken" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="gebreken"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="rdw_hana.rdw_db.tables::rdw_gebreken">
+    <resourceUri>rdw_hana.rdw_db.tables::rdw_gebreken</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="gebrek_identificatie"/>
+      <viewAttribute id="ingangsdatum_gebrek"/>
+      <viewAttribute id="einddatum_gebrek"/>
+      <viewAttribute id="gebrek_omschrijving"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.tables::rdw_gebreken">
+      <mapping xsi:type="Calculation:AttributeMapping" target="gebrek_identificatie" source="gebrek_identificatie"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ingangsdatum_gebrek" source="ingangsdatum_gebrek"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="einddatum_gebrek" source="einddatum_gebrek"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="gebrek_omschrijving" source="gebrek_omschrijving"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="gebrek_identificatie" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="functionele identificatiecode"/>
+      <keyMapping columnObjectName="Projection_1" columnName="gebrek_identificatie"/>
+    </attribute>
+    <attribute id="ingangsdatum_gebrek" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="geldig vanaf"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ingangsdatum_gebrek"/>
+    </attribute>
+    <attribute id="einddatum_gebrek" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="geldig tot"/>
+      <keyMapping columnObjectName="Projection_1" columnName="einddatum_gebrek"/>
+    </attribute>
+    <attribute id="gebrek_omschrijving" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="omschrijving"/>
+      <keyMapping columnObjectName="Projection_1" columnName="gebrek_omschrijving"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
