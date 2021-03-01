@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="ca24c044b1b14ae21c01ae35f858cea4" name="fg_rdw_gebreken" runtimeBehavior="BATCH_TASK">
+  <annotations key="sap.afm.layout" xmi:id="2c0fbb3774bb629046644b8975a26a69">
+    <annotations xmi:id="1a3b5615cc1588da34a93c3f182953dd" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="361d0b6ad71fae25d020f8b8838b0553" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="8b71e5e5fa315509ec79aac39b580721" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="65ff8bed3bf791bc59f6a70d78d79d39" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="7d1c1ce3cff11bb4ea0c9b33062c7eeb" key="sap.afm.palette">
+    <annotations xmi:id="9dba357dc091e3dc0310f52d68511c6a" key="additions" value="">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="3e53dbf8b6ae09a15506b8bbef1a3516" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="39339380c8c590b084c42d272a381076" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="eff779dfe2bae192cfcdfbba69972ed3" key="sap.afm.nodeOutputs">
+  </annotations>
+  <annotations xmi:id="31b80526a80c22f02e4440d72601789f" key="sap.im.explicitTypeConversion" value="true">
+  </annotations>
+  <tableMappings xmi:id="02c4cf887228ddcabcc4881562617ab4" source="ad0aeb4b789ea70f384e09079c357e98" target="31719ec88b89e0a73d884633cfdb5a95">
+    <attributeMappings xmi:id="54a71c80b105e24bcd51229dd5477e83" source="4fc439c3abb24fbdc79bbb62ea028a2f" target="d7c449a5dfc12057c53e156e484b6281">
+    </attributeMappings>
+    <attributeMappings xmi:id="491ec02a51c80973fde6651bfef23192" source="747c0eeb90424e2f839b5dd4bb196ed2" target="751598cada46a5cbe93c04029fd15442">
+    </attributeMappings>
+    <attributeMappings xmi:id="67fcbb2394076c066c4d1637591e2a71" source="249050e8cca1d512a63528d7cb1d01ae" target="f377d6888d38a5b385f9ca7739d9e529">
+    </attributeMappings>
+    <attributeMappings xmi:id="c390d7efe548f6dddd8f3747cc8a50d1" source="628375b9ded12662f8ccc66bb53ea7d0" target="6a0e91130d5bdc0bfe15625c0c97fb92">
+    </attributeMappings>
+    <attributeMappings xmi:id="cf2866631aca279919184ed38da67916" source="56b32538ff9c37cc855df4bb32a02453" target="4668b69b5c54066a13979c9834d59516">
+    </attributeMappings>
+    <attributeMappings xmi:id="83762675694921915c2760dcbe8e7ffd" source="ea035dc3aaec67265de01bcb277d9d72" target="24cf73351cba4d0fcea8eb7449b13aff">
+    </attributeMappings>
+    <attributeMappings xmi:id="7be5c6155e8a9c39a305e16ef79e7fce" source="dff9078ebedc42497f6aa4a898558959" target="b8882331f3fca29312f3931574c19428">
+    </attributeMappings>
+    <attributeMappings xmi:id="a329cbf1e7914252eea4c3441d672eb8" source="1bbfe507328328aeac05b4f478506762" target="08b9f9349edcc6c6c7bb28a0611f3664">
+    </attributeMappings>
+    <attributeMappings xmi:id="23ba65ae057651564df477078c3206b7" source="96ef259934469e38b8b12ed79107fd7b" target="2531dec3d6918c6be9c61d960d3c0d7d">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="54f839b98e589a47f008eabf91fa2896" source="29b51e76da0c271a74a4d8f2836ac1a5" target="a22b825a7558f0ac8c240e3f32904c89">
+    <attributeMappings xmi:id="94abe0487d10435d29f4024441cc1010" source="b0198e3b39af5c424afdbd851cbe92b7" target="39bafff759511c9a16cc5c168e0d1837">
+    </attributeMappings>
+    <attributeMappings xmi:id="864f83d6678a81bafdbd2e0aab74cdca" source="81ffe8bd2ae6c4eee48e53126dea43a8" target="493472a8ff8380f674dc11808171af3d">
+    </attributeMappings>
+    <attributeMappings xmi:id="cc1dab763a4cae0dad11981913af262a" source="a8164715fbaf7dfca87293bd0f9a5b5c" target="39cad504d791bd9b4925634143bb722b">
+    </attributeMappings>
+    <attributeMappings xmi:id="304f245e2bb82eb7d80a9bf63f04bffb" source="134182e57917f829e24417531e599717" target="60f440245d6ad05842c2740c1372c6f4">
+    </attributeMappings>
+    <attributeMappings xmi:id="412436694c37683e2518953644be15b9" source="55544044a0c340d854aa515e0a72a754" target="18e006c64f451686e3f2223d05ae5bb1">
+    </attributeMappings>
+    <attributeMappings xmi:id="5c4a4f39c85faef0d94bc61eddb6835e" source="adb3a8816b15e0bcc7b34e4170315310" target="60a954ce380d40ddcf6dbfeff1553c99">
+    </attributeMappings>
+    <attributeMappings xmi:id="94ab62ce776f7f4372038decfc32b9d6" source="5aca314df23b6eafc7ccf04a59085c0f" target="d341f9835d91449d7347d05eafcc4174">
+    </attributeMappings>
+    <attributeMappings xmi:id="d3de500adf1c205fcbb2d186ff8f359d" source="ed30098370c26dc4efdf8c24bb7a13f5" target="0c8c7f84c765f2d5b5d35c1f92bd8bc0">
+    </attributeMappings>
+    <attributeMappings xmi:id="39a127128540be5d98bbf0988dd3aee5" source="41902a57d80658e83286ae2b59a5dcfd" target="cfa640f11c0594b25894ea2ec0a4e6fe">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="8b1ceb74e860ba8e79c5f19894a8c779" name="vt_rdw_gebreken" catalogObjectName="rdw_hana.rdw_db.virtual_tables::vt_rdw_gebreken" type="VIRTUAL_TABLE" xsi:type="flowgraph:DataNode" dataLayout="ROW">
+    <annotations key="sap.afm.layout" xmi:id="65ffdb2a1b7ee77c13e2473dadf80f29">
+      <annotations xmi:id="925d335687fa08d1cb06798276738e34" key="x" value="175">
+      </annotations>
+      <annotations xmi:id="358a437809741300f1cd799718805266" key="y" value="68">
+      </annotations>
+      <annotations xmi:id="89f8d1ed982c0a1fdefab28568ab5dea" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="23146fb0c46a155e8d487833d232178d" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="7f22f51cbc6d909788f37f4443f2bcfc" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="0be68d24e837a5939e704166c9703a2f" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="f3c774abd1b3491961453fb41001c9e0" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="fb3d73892147c4c420e88144792b553a" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="ca63713b42994106a553660f6d4f5c5e" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="f38e8cbd505ccdabbe0e2ba0ac6e8591" key="columns" value="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;4fc439c3abb24fbdc79bbb62ea028a2f&quot;},{&quot;name&quot;:&quot;created_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;747c0eeb90424e2f839b5dd4bb196ed2&quot;},{&quot;name&quot;:&quot;updated_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;249050e8cca1d512a63528d7cb1d01ae&quot;},{&quot;name&quot;:&quot;gebrek_identificatie&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;628375b9ded12662f8ccc66bb53ea7d0&quot;},{&quot;name&quot;:&quot;ingangsdatum_gebrek&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;56b32538ff9c37cc855df4bb32a02453&quot;},{&quot;name&quot;:&quot;einddatum_gebrek&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ea035dc3aaec67265de01bcb277d9d72&quot;},{&quot;name&quot;:&quot;gebrek_paragraaf_nummer&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;dff9078ebedc42497f6aa4a898558959&quot;},{&quot;name&quot;:&quot;gebrek_artikel_nummer&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;1bbfe507328328aeac05b4f478506762&quot;},{&quot;name&quot;:&quot;gebrek_omschrijving&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;96ef259934469e38b8b12ed79107fd7b&quot;}]">
+    </annotations>
+    <annotations xmi:id="cde0c9fc708d45ce92c3c98f4683dc42" key="sap.im.realtime" value="false">
+    </annotations>
+    <annotations xmi:id="1ed6f5fc73854fe423d4e3174c285940" key="sap.im.tableLevelChange" value="false">
+    </annotations>
+    <outputs xmi:id="ad0aeb4b789ea70f384e09079c357e98" name="vt_rdw_gebreken">
+      <attributes xmi:id="4fc439c3abb24fbdc79bbb62ea028a2f" name="id" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="747c0eeb90424e2f839b5dd4bb196ed2" name="created_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="249050e8cca1d512a63528d7cb1d01ae" name="updated_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="628375b9ded12662f8ccc66bb53ea7d0" name="gebrek_identificatie" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="56b32538ff9c37cc855df4bb32a02453" name="ingangsdatum_gebrek" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="ea035dc3aaec67265de01bcb277d9d72" name="einddatum_gebrek" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="dff9078ebedc42497f6aa4a898558959" name="gebrek_paragraaf_nummer" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="1bbfe507328328aeac05b4f478506762" name="gebrek_artikel_nummer" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="96ef259934469e38b8b12ed79107fd7b" name="gebrek_omschrijving" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="04b5828b4bd8bb8272325c43be139ba3" xsi:type="flowgraph:DataNode" name="rdw_gebreken" truncateTable="false" catalogObjectName="rdw_hana.rdw_db.tables::rdw_gebreken" type="DATABASE_TABLE" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="a5b606a91de9114d9089fdd307e3733f">
+      <annotations xmi:id="9b85ce38f005477bca92122276d41655" key="x" value="742">
+      </annotations>
+      <annotations xmi:id="1af4e4cb902bc50cb09e88ec1cbc5529" key="y" value="26">
+      </annotations>
+      <annotations xmi:id="94711ee4d719d6d1728b1828be298158" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="e999a01327f4ecf0f932f036f96f90ad" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="c43af8ac8d41fbcfdee667a89c909cf7" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="b602cd624bf030f52cdd442ba8abd686" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="4603fb5b353ef16056ae65ddb2df5d03" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="57bea70d8b4954c7d80f5e3e34e35922" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="47573bd6e7f8be3d04fc68b265201e41" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="ffd17b77dc6961742db5543e852c2d6e" key="columns" value="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;39bafff759511c9a16cc5c168e0d1837&quot;},{&quot;name&quot;:&quot;created_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;493472a8ff8380f674dc11808171af3d&quot;},{&quot;name&quot;:&quot;updated_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;39cad504d791bd9b4925634143bb722b&quot;},{&quot;name&quot;:&quot;gebrek_identificatie&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;60f440245d6ad05842c2740c1372c6f4&quot;},{&quot;name&quot;:&quot;ingangsdatum_gebrek&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;18e006c64f451686e3f2223d05ae5bb1&quot;},{&quot;name&quot;:&quot;einddatum_gebrek&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;60a954ce380d40ddcf6dbfeff1553c99&quot;},{&quot;name&quot;:&quot;gebrek_paragraaf_nummer&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;d341f9835d91449d7347d05eafcc4174&quot;},{&quot;name&quot;:&quot;gebrek_artikel_nummer&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;0c8c7f84c765f2d5b5d35c1f92bd8bc0&quot;},{&quot;name&quot;:&quot;gebrek_omschrijving&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;cfa640f11c0594b25894ea2ec0a4e6fe&quot;}]">
+    </annotations>
+    <inputs xmi:id="a22b825a7558f0ac8c240e3f32904c89" name="rdw_gebreken" kind="TABLE">
+      <attributes xmi:id="39bafff759511c9a16cc5c168e0d1837" name="id" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="493472a8ff8380f674dc11808171af3d" name="created_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="39cad504d791bd9b4925634143bb722b" name="updated_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="60f440245d6ad05842c2740c1372c6f4" name="gebrek_identificatie" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="18e006c64f451686e3f2223d05ae5bb1" name="ingangsdatum_gebrek" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="60a954ce380d40ddcf6dbfeff1553c99" name="einddatum_gebrek" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="d341f9835d91449d7347d05eafcc4174" name="gebrek_paragraaf_nummer" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="0c8c7f84c765f2d5b5d35c1f92bd8bc0" name="gebrek_artikel_nummer" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="cfa640f11c0594b25894ea2ec0a4e6fe" name="gebrek_omschrijving" type="NVARCHAR" nullable="true" length="5000">
+      </attributes>
+    </inputs>
+  </nodes>
+  <nodes xmi:id="af6da95222f428008ef3413a91fc73a4" xsi:type="flowgraph:TableComparisonNode" name="TableComparison" compareTableName="rdw_hana.rdw_db.tables::rdw_gebreken" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" detectDeletedRows="true" compareAttributes="d7c449a5dfc12057c53e156e484b6281 751598cada46a5cbe93c04029fd15442 f377d6888d38a5b385f9ca7739d9e529 6a0e91130d5bdc0bfe15625c0c97fb92 4668b69b5c54066a13979c9834d59516 24cf73351cba4d0fcea8eb7449b13aff b8882331f3fca29312f3931574c19428 08b9f9349edcc6c6c7bb28a0611f3664 2531dec3d6918c6be9c61d960d3c0d7d">
+    <annotations key="sap.afm.layout" xmi:id="cbbaafa5982e5021abf9c6800cde494e">
+      <annotations xmi:id="38c1c1d389db9cc826b4a3fd0131e414" key="x" value="453">
+      </annotations>
+      <annotations xmi:id="263591edfc479e42e293fb096af73754" key="y" value="68">
+      </annotations>
+      <annotations xmi:id="cb826c2b18b1ceab28314f9f52db7817" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="e6d58e0fe6fed780ebecc25b7c373be3" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="31719ec88b89e0a73d884633cfdb5a95" name="TableComparison_IN" kind="TABLE">
+      <attributes xmi:id="d7c449a5dfc12057c53e156e484b6281" name="id" type="VARCHAR" nullable="true" length="5000">
+        <annotations xmi:id="25b71418ba728444331ee293d51a5a6c" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="751598cada46a5cbe93c04029fd15442" name="created_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="f377d6888d38a5b385f9ca7739d9e529" name="updated_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="6a0e91130d5bdc0bfe15625c0c97fb92" name="gebrek_identificatie" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="4668b69b5c54066a13979c9834d59516" name="ingangsdatum_gebrek" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="24cf73351cba4d0fcea8eb7449b13aff" name="einddatum_gebrek" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="b8882331f3fca29312f3931574c19428" name="gebrek_paragraaf_nummer" type="INTEGER" nullable="true" length="10">
+      </attributes>
+      <attributes xmi:id="08b9f9349edcc6c6c7bb28a0611f3664" name="gebrek_artikel_nummer" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="2531dec3d6918c6be9c61d960d3c0d7d" name="gebrek_omschrijving" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="29b51e76da0c271a74a4d8f2836ac1a5" name="TableComparison_OUT" kind="TABLE">
+      <attributes xmi:id="b0198e3b39af5c424afdbd851cbe92b7" name="id" type="NVARCHAR" nullable="true" mappedName="id" length="5000">
+      </attributes>
+      <attributes xmi:id="81ffe8bd2ae6c4eee48e53126dea43a8" name="created_at" type="TIMESTAMP" nullable="true" mappedName="created_at" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="a8164715fbaf7dfca87293bd0f9a5b5c" name="updated_at" type="TIMESTAMP" nullable="true" mappedName="updated_at" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="134182e57917f829e24417531e599717" name="gebrek_identificatie" type="NVARCHAR" nullable="true" mappedName="gebrek_identificatie" length="5000">
+      </attributes>
+      <attributes xmi:id="55544044a0c340d854aa515e0a72a754" name="ingangsdatum_gebrek" type="NVARCHAR" nullable="true" mappedName="ingangsdatum_gebrek" length="5000">
+      </attributes>
+      <attributes xmi:id="adb3a8816b15e0bcc7b34e4170315310" name="einddatum_gebrek" type="NVARCHAR" nullable="true" mappedName="einddatum_gebrek" length="5000">
+      </attributes>
+      <attributes xmi:id="5aca314df23b6eafc7ccf04a59085c0f" name="gebrek_paragraaf_nummer" type="NVARCHAR" nullable="true" mappedName="gebrek_paragraaf_nummer" length="5000">
+      </attributes>
+      <attributes xmi:id="ed30098370c26dc4efdf8c24bb7a13f5" name="gebrek_artikel_nummer" type="NVARCHAR" nullable="true" mappedName="gebrek_artikel_nummer" length="5000">
+      </attributes>
+      <attributes xmi:id="41902a57d80658e83286ae2b59a5dcfd" name="gebrek_omschrijving" type="NVARCHAR" nullable="true" mappedName="gebrek_omschrijving" length="5000">
+      </attributes>
+    </outputs>
+  </nodes>
+</flowgraph:ContainerNode>

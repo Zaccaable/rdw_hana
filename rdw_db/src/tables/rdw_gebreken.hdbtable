@@ -1,0 +1,13 @@
+COLUMN TABLE "rdw_hana.rdw_db.tables::rdw_gebreken" (
+	"id" NVARCHAR(5000) COMMENT 'GUID door RDW aangeleverd',
+	"created_at" TIMESTAMP COMMENT 'creatie datum in RDW dataset',
+	"updated_at" TIMESTAMP COMMENT 'update in RDW dataset',
+	"gebrek_identificatie" NVARCHAR(5000) COMMENT 'functionele identificatiecode',
+	"ingangsdatum_gebrek" NVARCHAR(5000) COMMENT 'geldig vanaf',
+	"einddatum_gebrek" NVARCHAR(5000) COMMENT 'geldig tot',
+	"gebrek_paragraaf_nummer" NVARCHAR(5000) COMMENT '',
+	"gebrek_artikel_nummer" NVARCHAR(5000) COMMENT '',
+	"gebrek_omschrijving" NVARCHAR(5000) COMMENT 'omschrijving',
+	PRIMARY KEY ("id")
+)
+COMMENT 'Gebreken master data from RDW source'
