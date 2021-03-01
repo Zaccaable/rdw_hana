@@ -1,0 +1,14 @@
+{
+	"impala": {
+		"object_owner": {
+			"roles": [
+				"GRANT_IMPALA_ACCESS"
+			]
+		},
+		"application_user": {
+			"roles": [
+				"GRANT_IMPALA_ACCESS"
+			]
+		}
+	}
+}

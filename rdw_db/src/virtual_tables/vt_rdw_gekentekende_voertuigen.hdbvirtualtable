@@ -1,0 +1,1 @@
+VIRTUAL TABLE "rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen" AT "IMPALA"."<NULL>"."<NULL>"."""jugo_pub"".""rdw_gekentekende_voertuigen"""
