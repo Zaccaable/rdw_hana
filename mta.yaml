@@ -1,0 +1,19 @@
+ID: rdw_hana
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: rdw_db
+   type: hdb
+   path: rdw_db
+   requires:
+    - name: hdi_rdw_db
+
+resources:
+ - name: hdi_rdw_db
+   parameters:
+      config:
+         schema: RDW
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
