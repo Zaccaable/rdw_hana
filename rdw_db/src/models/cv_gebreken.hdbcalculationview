@@ -9,7 +9,7 @@
   </DataSource>
 </dataSources>
 <calculationViews>
-  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+  <calculationView xsi:type="Calculation:ProjectionView" id="gebreken">
     <viewAttributes>
       <viewAttribute id="gebrek_identificatie"/>
       <viewAttribute id="ingangsdatum_gebrek"/>
@@ -25,24 +25,55 @@
       <mapping xsi:type="Calculation:AttributeMapping" target="gebrek_omschrijving" source="gebrek_omschrijving"/>
     </input>
   </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="convert_to_date">
+    <viewAttributes>
+      <viewAttribute id="gebrek_identificatie"/>
+      <viewAttribute id="ingangsdatum_gebrek"/>
+      <viewAttribute id="einddatum_gebrek"/>
+      <viewAttribute id="gebrek_omschrijving"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="cc_valid_from" datatype="DATE" expressionLanguage="SQL">
+        <formula>to_date(&quot;ingangsdatum_gebrek&quot;)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="cc_valid_to" datatype="DATE" expressionLanguage="SQL">
+        <formula>ifnull(to_date(&quot;einddatum_gebrek&quot;), '9999-12-31')</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <restrictedViewAttributes/>
+    <input node="gebreken">
+      <mapping xsi:type="Calculation:AttributeMapping" target="gebrek_identificatie" source="gebrek_identificatie"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ingangsdatum_gebrek" source="ingangsdatum_gebrek"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="einddatum_gebrek" source="einddatum_gebrek"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="gebrek_omschrijving" source="gebrek_omschrijving"/>
+    </input>
+  </calculationView>
 </calculationViews>
-<logicalModel id="Projection_1">
+<logicalModel id="convert_to_date">
   <attributes>
     <attribute id="gebrek_identificatie" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="functionele identificatiecode"/>
-      <keyMapping columnObjectName="Projection_1" columnName="gebrek_identificatie"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="gebrek_identificatie"/>
     </attribute>
     <attribute id="ingangsdatum_gebrek" order="2" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="geldig vanaf"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ingangsdatum_gebrek"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="ingangsdatum_gebrek"/>
     </attribute>
     <attribute id="einddatum_gebrek" order="3" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="geldig tot"/>
-      <keyMapping columnObjectName="Projection_1" columnName="einddatum_gebrek"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="einddatum_gebrek"/>
     </attribute>
     <attribute id="gebrek_omschrijving" order="4" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="omschrijving"/>
-      <keyMapping columnObjectName="Projection_1" columnName="gebrek_omschrijving"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="gebrek_omschrijving"/>
+    </attribute>
+    <attribute id="cc_valid_from" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="cc_valid_from"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="cc_valid_from"/>
+    </attribute>
+    <attribute id="cc_valid_to" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="cc_valid_to"/>
+      <keyMapping columnObjectName="convert_to_date" columnName="cc_valid_to"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
@@ -58,7 +89,11 @@
       <rectangleSize width="160"/>
     </shape>
   
-    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+    <shape expanded="true" modelObjectName="gebreken" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="322"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="convert_to_date" modelObjectNameSpace="CalculationView">
       <upperLeftCorner x="92" y="217"/>
       <rectangleSize height="30" width="160"/>
     </shape>
