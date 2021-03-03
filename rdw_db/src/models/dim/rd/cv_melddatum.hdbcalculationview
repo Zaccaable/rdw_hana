@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models.dim.rd::cv_melddatum" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Meld datum geconstateerd gebrek"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="rdw_hana.rdw_db.models.dim::cv_date">
+    <resourceUri>rdw_hana.rdw_db.models.dim::cv_date</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="date">
+    <viewAttributes>
+      <viewAttribute id="DATETIMESTAMP"/>
+      <viewAttribute id="DATE_SQL"/>
+      <viewAttribute id="DATETIME_SAP"/>
+      <viewAttribute id="DATE_SAP"/>
+      <viewAttribute id="YEAR"/>
+      <viewAttribute id="QUARTER"/>
+      <viewAttribute id="MONTH"/>
+      <viewAttribute id="WEEK"/>
+      <viewAttribute id="WEEK_YEAR"/>
+      <viewAttribute id="DAY_OF_WEEK"/>
+      <viewAttribute id="DAY"/>
+      <viewAttribute id="HOUR"/>
+      <viewAttribute id="MINUTE"/>
+      <viewAttribute id="SECOND"/>
+      <viewAttribute id="CALQUARTER"/>
+      <viewAttribute id="CALMONTH"/>
+      <viewAttribute id="CALWEEK"/>
+      <viewAttribute id="YEAR_INT"/>
+      <viewAttribute id="QUARTER_INT"/>
+      <viewAttribute id="MONTH_INT"/>
+      <viewAttribute id="WEEK_INT"/>
+      <viewAttribute id="WEEK_YEAR_INT"/>
+      <viewAttribute id="DAY_OF_WEEK_INT"/>
+      <viewAttribute id="DAY_INT"/>
+      <viewAttribute id="HOUR_INT"/>
+      <viewAttribute id="MINUTE_INT"/>
+      <viewAttribute id="SECOND_INT"/>
+      <viewAttribute id="MONTH_LAST_DAY"/>
+      <viewAttribute id="TZNTSTMPS"/>
+      <viewAttribute id="TZNTSTMPL"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.models.dim::cv_date">
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATETIMESTAMP" source="DATETIMESTAMP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE_SQL" source="DATE_SQL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATETIME_SAP" source="DATETIME_SAP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATE_SAP" source="DATE_SAP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YEAR" source="YEAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QUARTER" source="QUARTER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MONTH" source="MONTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEEK" source="WEEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEEK_YEAR" source="WEEK_YEAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DAY_OF_WEEK" source="DAY_OF_WEEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DAY" source="DAY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HOUR" source="HOUR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MINUTE" source="MINUTE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SECOND" source="SECOND"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALQUARTER" source="CALQUARTER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALMONTH" source="CALMONTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALWEEK" source="CALWEEK"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YEAR_INT" source="YEAR_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QUARTER_INT" source="QUARTER_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_INT" source="MONTH_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEEK_INT" source="WEEK_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEEK_YEAR_INT" source="WEEK_YEAR_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DAY_OF_WEEK_INT" source="DAY_OF_WEEK_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DAY_INT" source="DAY_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HOUR_INT" source="HOUR_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MINUTE_INT" source="MINUTE_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SECOND_INT" source="SECOND_INT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MONTH_LAST_DAY" source="MONTH_LAST_DAY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TZNTSTMPS" source="TZNTSTMPS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TZNTSTMPL" source="TZNTSTMPL"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="date">
+  <attributes>
+    <attribute id="Meldtimestamp" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Meldtimestamp"/>
+      <keyMapping columnObjectName="date" columnName="DATETIMESTAMP"/>
+    </attribute>
+    <attribute id="Melddatum" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum"/>
+      <keyMapping columnObjectName="date" columnName="DATE_SQL"/>
+    </attribute>
+    <attribute id="Meldtimestamp_str" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Meldtimestamp_str"/>
+      <keyMapping columnObjectName="date" columnName="DATETIME_SAP"/>
+    </attribute>
+    <attribute id="Melddatum_str" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_str"/>
+      <keyMapping columnObjectName="date" columnName="DATE_SAP"/>
+    </attribute>
+    <attribute id="Melddatum_jaar" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_jaar"/>
+      <keyMapping columnObjectName="date" columnName="YEAR"/>
+    </attribute>
+    <attribute id="Melddatum_kwartaal" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_kwartaal"/>
+      <keyMapping columnObjectName="date" columnName="QUARTER"/>
+    </attribute>
+    <attribute id="Melddatum_maand" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_maand"/>
+      <keyMapping columnObjectName="date" columnName="MONTH"/>
+    </attribute>
+    <attribute id="WEEK" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEEK"/>
+      <keyMapping columnObjectName="date" columnName="WEEK"/>
+    </attribute>
+    <attribute id="WEEK_YEAR" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEEK_YEAR"/>
+      <keyMapping columnObjectName="date" columnName="WEEK_YEAR"/>
+    </attribute>
+    <attribute id="DAY_OF_WEEK" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DAY_OF_WEEK"/>
+      <keyMapping columnObjectName="date" columnName="DAY_OF_WEEK"/>
+    </attribute>
+    <attribute id="DAY" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DAY"/>
+      <keyMapping columnObjectName="date" columnName="DAY"/>
+    </attribute>
+    <attribute id="HOUR" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HOUR"/>
+      <keyMapping columnObjectName="date" columnName="HOUR"/>
+    </attribute>
+    <attribute id="MINUTE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MINUTE"/>
+      <keyMapping columnObjectName="date" columnName="MINUTE"/>
+    </attribute>
+    <attribute id="SECOND" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SECOND"/>
+      <keyMapping columnObjectName="date" columnName="SECOND"/>
+    </attribute>
+    <attribute id="Melddatum_jaar_kwartaal" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_jaar_kwartaal"/>
+      <keyMapping columnObjectName="date" columnName="CALQUARTER"/>
+    </attribute>
+    <attribute id="Melddatum_jaar_maand" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Melddatum_jaar_maand"/>
+      <keyMapping columnObjectName="date" columnName="CALMONTH"/>
+    </attribute>
+    <attribute id="CALWEEK" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CALWEEK"/>
+      <keyMapping columnObjectName="date" columnName="CALWEEK"/>
+    </attribute>
+    <attribute id="YEAR_INT" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="YEAR_INT"/>
+      <keyMapping columnObjectName="date" columnName="YEAR_INT"/>
+    </attribute>
+    <attribute id="QUARTER_INT" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QUARTER_INT"/>
+      <keyMapping columnObjectName="date" columnName="QUARTER_INT"/>
+    </attribute>
+    <attribute id="MONTH_INT" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MONTH_INT"/>
+      <keyMapping columnObjectName="date" columnName="MONTH_INT"/>
+    </attribute>
+    <attribute id="WEEK_INT" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEEK_INT"/>
+      <keyMapping columnObjectName="date" columnName="WEEK_INT"/>
+    </attribute>
+    <attribute id="WEEK_YEAR_INT" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEEK_YEAR_INT"/>
+      <keyMapping columnObjectName="date" columnName="WEEK_YEAR_INT"/>
+    </attribute>
+    <attribute id="DAY_OF_WEEK_INT" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DAY_OF_WEEK_INT"/>
+      <keyMapping columnObjectName="date" columnName="DAY_OF_WEEK_INT"/>
+    </attribute>
+    <attribute id="DAY_INT" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DAY_INT"/>
+      <keyMapping columnObjectName="date" columnName="DAY_INT"/>
+    </attribute>
+    <attribute id="HOUR_INT" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HOUR_INT"/>
+      <keyMapping columnObjectName="date" columnName="HOUR_INT"/>
+    </attribute>
+    <attribute id="MINUTE_INT" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MINUTE_INT"/>
+      <keyMapping columnObjectName="date" columnName="MINUTE_INT"/>
+    </attribute>
+    <attribute id="SECOND_INT" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SECOND_INT"/>
+      <keyMapping columnObjectName="date" columnName="SECOND_INT"/>
+    </attribute>
+    <attribute id="MONTH_LAST_DAY" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MONTH_LAST_DAY"/>
+      <keyMapping columnObjectName="date" columnName="MONTH_LAST_DAY"/>
+    </attribute>
+    <attribute id="TZNTSTMPS" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TZNTSTMPS"/>
+      <keyMapping columnObjectName="date" columnName="TZNTSTMPS"/>
+    </attribute>
+    <attribute id="TZNTSTMPL" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TZNTSTMPL"/>
+      <keyMapping columnObjectName="date" columnName="TZNTSTMPL"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="date" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="91" y="263"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

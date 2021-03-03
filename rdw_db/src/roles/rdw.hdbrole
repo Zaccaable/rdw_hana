@@ -1,0 +1,13 @@
+{ 
+  "role":{ 
+    "name":"rdw_hana.rdw_db.roles::rdw", 
+	"schema_privileges": [
+		{
+			"privileges": [
+				"SELECT",
+				"EXECUTE"
+			]
+		}
+	]
+  } 
+}

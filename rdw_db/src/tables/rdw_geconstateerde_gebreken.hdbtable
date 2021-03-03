@@ -1,0 +1,14 @@
+COLUMN TABLE "rdw_hana.rdw_db.tables::rdw_geconstateerde_gebreken" (
+	"id" NVARCHAR(5000) COMMENT 'GUID door RDW aangeleverd',
+	"created_at" TIMESTAMP COMMENT 'creatie datum in RDW dataset',
+	"updated_at" TIMESTAMP COMMENT 'update in RDW dataset',
+	"kenteken" NVARCHAR(5000) COMMENT 'Kenteken',
+	"soort_erkenning_keuringsinstantie" NVARCHAR(5000) COMMENT 'Soort keuringsinstantie',
+	"meld_datum_door_keuringsinstantie" NVARCHAR(5000) COMMENT 'Datum van melding',
+	"meld_tijd_door_keuringsinstantie" NVARCHAR(5000) COMMENT 'Tijd van melding',
+	"gebrek_identificatie" NVARCHAR(5000) COMMENT 'functionele identificatiecode van net gebrek',
+	"soort_erkenning_omschrijving" NVARCHAR(5000) COMMENT 'Soort keuringsinstantie omschrijving',
+	"aantal_gebreken_geconstateerd" INTEGER COMMENT 'Aantal geconstateerde gebreken tijdens keuring',
+	PRIMARY KEY ("id")
+)
+COMMENT 'Geconstateerde gebreken bij keuringen'
