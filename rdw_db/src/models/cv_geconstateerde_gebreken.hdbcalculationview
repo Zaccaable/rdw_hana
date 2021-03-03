@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models::cv_geconstateerde_gebreken" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
-<descriptions defaultDescription="cv_geconstateerde_gebreken"/>
-<localVariables/>
-<variableMappings/>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" runWithInvokerPrivileges="true" schemaVersion="3.0" dataCategory="CUBE" cacheInvalidationPeriod="NONE" id="rdw_hana.rdw_db.models::cv_geconstateerde_gebreken" applyPrivilegeType="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="cv_geconstateerde_gebreken"></descriptions>
+<localVariables></localVariables>
+<variableMappings></variableMappings>
 <dataSources>
   <DataSource id="rdw_hana.rdw_db.tables::rdw_geconstateerde_gebreken">
     <resourceUri>rdw_hana.rdw_db.tables::rdw_geconstateerde_gebreken</resourceUri>
@@ -11,77 +11,77 @@
 <calculationViews>
   <calculationView xsi:type="Calculation:ProjectionView" id="geconstateerde_gebreken">
     <viewAttributes>
-      <viewAttribute id="id"/>
-      <viewAttribute id="created_at"/>
-      <viewAttribute id="updated_at"/>
-      <viewAttribute id="kenteken"/>
-      <viewAttribute id="soort_erkenning_keuringsinstantie"/>
-      <viewAttribute id="meld_datum_door_keuringsinstantie"/>
-      <viewAttribute id="meld_tijd_door_keuringsinstantie"/>
-      <viewAttribute id="gebrek_identificatie"/>
-      <viewAttribute id="soort_erkenning_omschrijving"/>
-      <viewAttribute id="aantal_gebreken_geconstateerd"/>
+      <viewAttribute id="id"></viewAttribute>
+      <viewAttribute id="created_at"></viewAttribute>
+      <viewAttribute id="updated_at"></viewAttribute>
+      <viewAttribute id="kenteken"></viewAttribute>
+      <viewAttribute id="soort_erkenning_keuringsinstantie"></viewAttribute>
+      <viewAttribute id="meld_datum_door_keuringsinstantie"></viewAttribute>
+      <viewAttribute id="meld_tijd_door_keuringsinstantie"></viewAttribute>
+      <viewAttribute id="gebrek_identificatie"></viewAttribute>
+      <viewAttribute id="soort_erkenning_omschrijving"></viewAttribute>
+      <viewAttribute id="aantal_gebreken_geconstateerd"></viewAttribute>
     </viewAttributes>
-    <calculatedViewAttributes/>
-    <restrictedViewAttributes/>
-    <input node="rdw_hana.rdw_db.tables::rdw_geconstateerde_gebreken"/>
+    <calculatedViewAttributes></calculatedViewAttributes>
+    <restrictedViewAttributes></restrictedViewAttributes>
+    <input node="rdw_hana.rdw_db.tables::rdw_geconstateerde_gebreken"></input>
   </calculationView>
 </calculationViews>
 <logicalModel id="geconstateerde_gebreken">
   <attributes>
-    <attribute id="id" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="GUID door RDW aangeleverd"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="id"/>
+    <attribute id="id" displayAttribute="false" order="1" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GUID door RDW aangeleverd"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="id"></keyMapping>
     </attribute>
-    <attribute id="created_at" order="2" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="creatie datum in RDW dataset"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="created_at"/>
+    <attribute id="created_at" displayAttribute="false" order="2" attributeHierarchyActive="false">
+      <descriptions defaultDescription="creatie datum in RDW dataset"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="created_at"></keyMapping>
     </attribute>
-    <attribute id="updated_at" order="3" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="update in RDW dataset"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="updated_at"/>
+    <attribute id="updated_at" displayAttribute="false" order="3" attributeHierarchyActive="false">
+      <descriptions defaultDescription="update in RDW dataset"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="updated_at"></keyMapping>
     </attribute>
-    <attribute id="soort_erkenning_keuringsinstantie" order="4" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Soort keuringsinstantie"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="soort_erkenning_keuringsinstantie"/>
+    <attribute id="soort_erkenning_keuringsinstantie" displayAttribute="false" order="4" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Soort keuringsinstantie"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="soort_erkenning_keuringsinstantie"></keyMapping>
     </attribute>
-    <attribute id="meld_datum_door_keuringsinstantie" order="5" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Datum van melding"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_datum_door_keuringsinstantie"/>
+    <attribute id="meld_datum_door_keuringsinstantie" displayAttribute="false" order="5" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Datum van melding"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_datum_door_keuringsinstantie"></keyMapping>
     </attribute>
-    <attribute id="meld_tijd_door_keuringsinstantie" order="6" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Tijd van melding"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_tijd_door_keuringsinstantie"/>
+    <attribute id="meld_tijd_door_keuringsinstantie" displayAttribute="false" order="6" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Tijd van melding"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_tijd_door_keuringsinstantie"></keyMapping>
     </attribute>
-    <attribute id="gebrek_identificatie_1" order="7" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="functionele identificatiecode van net gebrek"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="gebrek_identificatie"/>
+    <attribute id="gebrek_identificatie_1" displayAttribute="false" order="7" attributeHierarchyActive="false">
+      <descriptions defaultDescription="functionele identificatiecode van net gebrek"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="gebrek_identificatie"></keyMapping>
     </attribute>
-    <attribute id="soort_erkenning_omschrijving" order="8" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Soort keuringsinstantie omschrijving"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="soort_erkenning_omschrijving"/>
+    <attribute id="soort_erkenning_omschrijving" displayAttribute="false" order="8" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Soort keuringsinstantie omschrijving"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="soort_erkenning_omschrijving"></keyMapping>
     </attribute>
     <attribute id="gebrek_identificatie$local">
-      <descriptions defaultDescription="functionele identificatiecode van net gebrek"/>
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="gebrek_identificatie"/>
+      <descriptions defaultDescription="functionele identificatiecode van net gebrek"></descriptions>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="gebrek_identificatie"></keyMapping>
     </attribute>
     <attribute id="kenteken$local">
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="kenteken"/>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="kenteken"></keyMapping>
     </attribute>
     <attribute id="meld_datum_door_keuringsinstantie$local">
-      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_datum_door_keuringsinstantie"/>
+      <keyMapping columnObjectName="geconstateerde_gebreken" columnName="meld_datum_door_keuringsinstantie"></keyMapping>
     </attribute>
   </attributes>
-  <calculatedAttributes/>
+  <calculatedAttributes></calculatedAttributes>
   <baseMeasures>
-    <measure id="aantal_gebreken_geconstateerd" order="9" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="Aantal geconstateerde gebreken tijdens keuring"/>
-      <measureMapping columnObjectName="geconstateerde_gebreken" columnName="aantal_gebreken_geconstateerd"/>
+    <measure aggregationType="sum" id="aantal_gebreken_geconstateerd" order="9" measureType="simple">
+      <descriptions defaultDescription="Aantal geconstateerde gebreken tijdens keuring"></descriptions>
+      <measureMapping columnObjectName="geconstateerde_gebreken" columnName="aantal_gebreken_geconstateerd"></measureMapping>
     </measure>
   </baseMeasures>
-  <calculatedMeasures/>
-  <restrictedMeasures/>
-  <localDimensions/>
+  <calculatedMeasures></calculatedMeasures>
+  <restrictedMeasures></restrictedMeasures>
+  <localDimensions></localDimensions>
   <sharedDimensions>
     <logicalJoin associatedObjectUri="rdw_hana.rdw_db.models::cv_gebreken">
       <attributes>
@@ -90,8 +90,8 @@
       <associatedAttributeNames>
         <attributeName>gebrek_identificatie</attributeName>
       </associatedAttributeNames>
-      <properties cardinality="CN_1" joinType="leftOuter" joinOperator="Equal"/>
-      <associatedAttributeFeatures/>
+      <properties joinType="leftOuter" joinOperator="Equal" cardinality="CN_1"></properties>
+      <associatedAttributeFeatures></associatedAttributeFeatures>
     </logicalJoin>
     <logicalJoin associatedObjectUri="rdw_hana.rdw_db.models::cv_gekentekende_voertuigen">
       <attributes>
@@ -100,53 +100,53 @@
       <associatedAttributeNames>
         <attributeName>kenteken</attributeName>
       </associatedAttributeNames>
-      <properties cardinality="CN_1" joinType="leftOuter" joinOperator="Equal"/>
+      <properties joinType="leftOuter" joinOperator="Equal" cardinality="CN_1"></properties>
       <associatedAttributeFeatures>
-        <attributeReference alias="kenteken_1" attributeName="kenteken"/>
-        <attributeReference alias="created_at_1" attributeName="created_at"/>
-        <attributeReference alias="id_1" attributeName="id"/>
-        <attributeReference alias="updated_at_1" attributeName="updated_at"/>
+        <attributeReference alias="kenteken_1" attributeName="kenteken"></attributeReference>
+        <attributeReference alias="created_at_1" attributeName="created_at"></attributeReference>
+        <attributeReference alias="id_1" attributeName="id"></attributeReference>
+        <attributeReference alias="updated_at_1" attributeName="updated_at"></attributeReference>
       </associatedAttributeFeatures>
     </logicalJoin>
-    <logicalJoin associatedObjectUri="rdw_hana.rdw_db.models::cv_date">
+    <logicalJoin associatedObjectUri="rdw_hana.rdw_db.models.dim::cv_date">
       <attributes>
         <attributeRef>meld_datum_door_keuringsinstantie$local</attributeRef>
       </attributes>
       <associatedAttributeNames>
         <attributeName>DATE_SAP</attributeName>
       </associatedAttributeNames>
-      <properties cardinality="CN_1" joinType="leftOuter" joinOperator="Equal"/>
-      <associatedAttributeFeatures/>
+      <properties joinType="leftOuter" joinOperator="Equal" cardinality="CN_1"></properties>
+      <associatedAttributeFeatures></associatedAttributeFeatures>
     </logicalJoin>
   </sharedDimensions>
 </logicalModel>
 <layout>
   <shapes>
-    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-      <upperLeftCorner x="92" y="112"/>
+    <shape expanded="true" modelObjectNameSpace="MeasureGroup" modelObjectName="Output">
+      <upperLeftCorner x="92" y="112"></upperLeftCorner>
     
-      <rectangleSize width="160"/>
+      <rectangleSize width="160"></rectangleSize>
     </shape>
   
-    <shape expanded="true" modelObjectName="geconstateerde_gebreken" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="92" y="232"/>
-      <rectangleSize height="30" width="160"/>
+    <shape expanded="true" modelObjectNameSpace="CalculationView" modelObjectName="geconstateerde_gebreken">
+      <upperLeftCorner x="92" y="232"></upperLeftCorner>
+      <rectangleSize width="160" height="30"></rectangleSize>
     </shape>
-    <shape modelObjectName="geconstateerde_gebreken" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
-      <upperLeftCorner x="20" y="30"/>
-      <rectangleSize width="263.33203125"/>
+    <shape modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository" modelObjectName="geconstateerde_gebreken">
+      <upperLeftCorner x="20" y="30"></upperLeftCorner>
+      <rectangleSize width="263"></rectangleSize>
     </shape>
-    <shape modelObjectName="rdw_hana.rdw_db.models::cv_gebreken" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-      <upperLeftCorner x="320" y="30"/>
-      <rectangleSize width="292.732421875"/>
+    <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="rdw_hana.rdw_db.models::cv_gebreken">
+      <upperLeftCorner x="320" y="30"></upperLeftCorner>
+      <rectangleSize width="292"></rectangleSize>
     </shape>
-    <shape modelObjectName="rdw_hana.rdw_db.models::cv_gekentekende_voertuigen" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-      <upperLeftCorner x="620" y="30"/>
-      <rectangleSize width="387.42578125"/>
+    <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="rdw_hana.rdw_db.models::cv_gekentekende_voertuigen">
+      <upperLeftCorner x="620" y="30"></upperLeftCorner>
+      <rectangleSize width="387"></rectangleSize>
     </shape>
-    <shape modelObjectName="rdw_hana.rdw_db.models::cv_date" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
-      <upperLeftCorner x="920" y="30"/>
-      <rectangleSize width="264.05078125"/>
+    <shape modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository" modelObjectName="rdw_hana.rdw_db.models.dim::cv_date">
+      <upperLeftCorner x="920" y="30"></upperLeftCorner>
+      <rectangleSize width="264"></rectangleSize>
     </shape>
   </shapes>
 </layout>
