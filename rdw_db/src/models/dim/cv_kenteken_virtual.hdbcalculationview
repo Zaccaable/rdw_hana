@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models.dim::cv_kenteken_virtual" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="cv_kenteken_virtual"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen">
+    <resourceUri>rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen</resourceUri>
+  </DataSource>
+  <DataSource id="rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen_brandstof">
+    <resourceUri>rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen_brandstof</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="gekentekende_voertuigen">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="voertuigsoort"/>
+      <viewAttribute id="merk"/>
+      <viewAttribute id="handelsbenaming"/>
+      <viewAttribute id="vervaldatum_apk"/>
+      <viewAttribute id="datum_tenaamstelling"/>
+      <viewAttribute id="datum_eerste_toelating"/>
+      <viewAttribute id="zuinigheidslabel"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="gekentekende_voertuigen_brandstof">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="brandstof_omschrijving"/>
+      <viewAttribute id="emissieklasse"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen_brandstof"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="kenteken" cardinality="C1_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="voertuigsoort"/>
+      <viewAttribute id="merk"/>
+      <viewAttribute id="handelsbenaming"/>
+      <viewAttribute id="vervaldatum_apk"/>
+      <viewAttribute id="datum_tenaamstelling"/>
+      <viewAttribute id="datum_eerste_toelating"/>
+      <viewAttribute id="zuinigheidslabel"/>
+      <viewAttribute id="brandstof_omschrijving"/>
+      <viewAttribute id="emissieklasse"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="gekentekende_voertuigen">
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+    </input>
+  
+    <input node="gekentekende_voertuigen_brandstof">
+  
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+  
+    </input>
+    <joinAttribute name="kenteken"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="kenteken">
+  <attributes>
+    <attribute id="kenteken" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="kenteken"/>
+      <keyMapping columnObjectName="kenteken" columnName="kenteken"/>
+    </attribute>
+    <attribute id="voertuigsoort" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="voertuigsoort"/>
+      <keyMapping columnObjectName="kenteken" columnName="voertuigsoort"/>
+    </attribute>
+    <attribute id="merk" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="merk"/>
+      <keyMapping columnObjectName="kenteken" columnName="merk"/>
+    </attribute>
+    <attribute id="handelsbenaming" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="handelsbenaming"/>
+      <keyMapping columnObjectName="kenteken" columnName="handelsbenaming"/>
+    </attribute>
+    <attribute id="vervaldatum_apk" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="vervaldatum_apk"/>
+      <keyMapping columnObjectName="kenteken" columnName="vervaldatum_apk"/>
+    </attribute>
+    <attribute id="datum_tenaamstelling" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="datum_tenaamstelling"/>
+      <keyMapping columnObjectName="kenteken" columnName="datum_tenaamstelling"/>
+    </attribute>
+    <attribute id="datum_eerste_toelating" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="datum_eerste_toelating"/>
+      <keyMapping columnObjectName="kenteken" columnName="datum_eerste_toelating"/>
+    </attribute>
+    <attribute id="zuinigheidslabel" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="zuinigheidslabel"/>
+      <keyMapping columnObjectName="kenteken" columnName="zuinigheidslabel"/>
+    </attribute>
+    <attribute id="brandstof_omschrijving" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstof_omschrijving"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstof_omschrijving"/>
+    </attribute>
+    <attribute id="emissieklasse" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="emissieklasse"/>
+      <keyMapping columnObjectName="kenteken" columnName="emissieklasse"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="221.11302679000914" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92.00000000000001" y="376.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="gekentekende_voertuigen_brandstof" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302.00000000000006" y="376.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="kenteken" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="221.11302679000914" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="kenteken" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="212"/>
+    </shape>
+    <shape modelObjectName="gekentekende_voertuigen_brandstof" modelObjectNameSpace="kenteken" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="274"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
