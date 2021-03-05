@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models.dim::cv_kenteken" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Kenteken"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen">
+    <resourceUri>rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen</resourceUri>
+  </DataSource>
+  <DataSource id="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen_brandstof">
+    <resourceUri>rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen_brandstof</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="gekentekende_voertuigen">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="voertuigsoort"/>
+      <viewAttribute id="merk"/>
+      <viewAttribute id="handelsbenaming"/>
+      <viewAttribute id="vervaldatum_apk"/>
+      <viewAttribute id="datum_tenaamstelling"/>
+      <viewAttribute id="bruto_bpm"/>
+      <viewAttribute id="zuinigheidslabel"/>
+      <viewAttribute id="datum_eerste_toelating"/>
+      <viewAttribute id="datum_eerste_afgifte_nederland"/>
+      <viewAttribute id="catalogusprijs"/>
+      <viewAttribute id="wam_verzekerd"/>
+      <viewAttribute id="maximale_constructiesnelheid_brom_snorfiets"/>
+      <viewAttribute id="variant"/>
+      <viewAttribute id="uitvoering"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen">
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="voertuigsoort" source="voertuigsoort"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="merk" source="merk"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="handelsbenaming" source="handelsbenaming"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="vervaldatum_apk" source="vervaldatum_apk"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_tenaamstelling" source="datum_tenaamstelling"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="bruto_bpm" source="bruto_bpm"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="zuinigheidslabel" source="zuinigheidslabel"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_eerste_toelating" source="datum_eerste_toelating"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_eerste_afgifte_nederland" source="datum_eerste_afgifte_nederland"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="catalogusprijs" source="catalogusprijs"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="wam_verzekerd" source="wam_verzekerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="maximale_constructiesnelheid_brom_snorfiets" source="maximale_constructiesnelheid_brom_snorfiets"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="variant" source="variant"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitvoering" source="uitvoering"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="gekentekende_voertuigen_brandstof">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="brandstof_volgnummer"/>
+      <viewAttribute id="brandstof_omschrijving"/>
+      <viewAttribute id="brandstofverbruik_buiten_de_stad"/>
+      <viewAttribute id="brandstofverbruik_gecombineerd"/>
+      <viewAttribute id="brandstofverbruik_stad"/>
+      <viewAttribute id="co2_uitstoot_gecombineerd"/>
+      <viewAttribute id="co2_uitstoot_gewogen"/>
+      <viewAttribute id="geluidsniveau_rijdend"/>
+      <viewAttribute id="geluidsniveau_stationair"/>
+      <viewAttribute id="emissieklasse"/>
+      <viewAttribute id="milieuklasse_eg_goedkeuring_licht_"/>
+      <viewAttribute id="milieuklasse_eg_goedkeuring_zwaar"/>
+      <viewAttribute id="uitstoot_deeltjes_licht"/>
+      <viewAttribute id="uitstoot_deeltjes_zwaar"/>
+      <viewAttribute id="nettomaximumvermogen"/>
+      <viewAttribute id="nominaal_continu_maximumvermogen"/>
+      <viewAttribute id="roetuitstoot"/>
+      <viewAttribute id="toerental_geluidsniveau"/>
+      <viewAttribute id="emissie_deeltjes_type1_wltp"/>
+      <viewAttribute id="emissie_co2_gecombineerd_wltp"/>
+      <viewAttribute id="emissie_co2_gewogen_gecombineerd_wltp"/>
+      <viewAttribute id="brandstof_verbruik_gecombineerd_wltp"/>
+      <viewAttribute id="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+      <viewAttribute id="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+      <viewAttribute id="actie_radius_enkel_elektrisch_wltp"/>
+      <viewAttribute id="actie_radius_enkel_elektrisch_stad_wltp"/>
+      <viewAttribute id="elektrisch_verbruik_extern_opladen_wltp"/>
+      <viewAttribute id="actie_radius_extern_opladen_wltp"/>
+      <viewAttribute id="actie_radius_extern_opladen_stad_wltp"/>
+      <viewAttribute id="max_vermogen_15_minuten"/>
+      <viewAttribute id="max_vermogen_60_minuten"/>
+      <viewAttribute id="netto_max_vermogen_elektrisch"/>
+      <viewAttribute id="klasse_hybride_elektrisch_voertuig"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen_brandstof">
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_volgnummer" source="brandstof_volgnummer"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_omschrijving" source="brandstof_omschrijving"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_buiten_de_stad" source="brandstofverbruik_buiten_de_stad"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_gecombineerd" source="brandstofverbruik_gecombineerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_stad" source="brandstofverbruik_stad"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="co2_uitstoot_gecombineerd" source="co2_uitstoot_gecombineerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="co2_uitstoot_gewogen" source="co2_uitstoot_gewogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="geluidsniveau_rijdend" source="geluidsniveau_rijdend"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="geluidsniveau_stationair" source="geluidsniveau_stationair"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissieklasse" source="emissieklasse"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="milieuklasse_eg_goedkeuring_licht_" source="milieuklasse_eg_goedkeuring_licht_"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="milieuklasse_eg_goedkeuring_zwaar" source="milieuklasse_eg_goedkeuring_zwaar"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitstoot_deeltjes_licht" source="uitstoot_deeltjes_licht"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitstoot_deeltjes_zwaar" source="uitstoot_deeltjes_zwaar"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="nettomaximumvermogen" source="nettomaximumvermogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="nominaal_continu_maximumvermogen" source="nominaal_continu_maximumvermogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="roetuitstoot" source="roetuitstoot"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="toerental_geluidsniveau" source="toerental_geluidsniveau"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_deeltjes_type1_wltp" source="emissie_deeltjes_type1_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_co2_gecombineerd_wltp" source="emissie_co2_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_co2_gewogen_gecombineerd_wltp" source="emissie_co2_gewogen_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_verbruik_gecombineerd_wltp" source="brandstof_verbruik_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_verbruik_gewogen_gecombineerd_wltp" source="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="elektrisch_verbruik_enkel_elektrisch_wltp" source="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_enkel_elektrisch_wltp" source="actie_radius_enkel_elektrisch_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_enkel_elektrisch_stad_wltp" source="actie_radius_enkel_elektrisch_stad_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="elektrisch_verbruik_extern_opladen_wltp" source="elektrisch_verbruik_extern_opladen_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_extern_opladen_wltp" source="actie_radius_extern_opladen_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_extern_opladen_stad_wltp" source="actie_radius_extern_opladen_stad_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="max_vermogen_15_minuten" source="max_vermogen_15_minuten"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="max_vermogen_60_minuten" source="max_vermogen_60_minuten"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="netto_max_vermogen_elektrisch" source="netto_max_vermogen_elektrisch"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="klasse_hybride_elektrisch_voertuig" source="klasse_hybride_elektrisch_voertuig"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="kenteken" cardinality="C1_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="kenteken"/>
+      <viewAttribute id="voertuigsoort"/>
+      <viewAttribute id="merk"/>
+      <viewAttribute id="handelsbenaming"/>
+      <viewAttribute id="vervaldatum_apk"/>
+      <viewAttribute id="datum_tenaamstelling"/>
+      <viewAttribute id="bruto_bpm"/>
+      <viewAttribute id="zuinigheidslabel"/>
+      <viewAttribute id="datum_eerste_toelating"/>
+      <viewAttribute id="datum_eerste_afgifte_nederland"/>
+      <viewAttribute id="catalogusprijs"/>
+      <viewAttribute id="wam_verzekerd"/>
+      <viewAttribute id="maximale_constructiesnelheid_brom_snorfiets"/>
+      <viewAttribute id="variant"/>
+      <viewAttribute id="uitvoering"/>
+      <viewAttribute id="brandstof_volgnummer"/>
+      <viewAttribute id="brandstof_omschrijving"/>
+      <viewAttribute id="brandstofverbruik_buiten_de_stad"/>
+      <viewAttribute id="brandstofverbruik_gecombineerd"/>
+      <viewAttribute id="brandstofverbruik_stad"/>
+      <viewAttribute id="co2_uitstoot_gecombineerd"/>
+      <viewAttribute id="co2_uitstoot_gewogen"/>
+      <viewAttribute id="geluidsniveau_rijdend"/>
+      <viewAttribute id="geluidsniveau_stationair"/>
+      <viewAttribute id="emissieklasse"/>
+      <viewAttribute id="milieuklasse_eg_goedkeuring_licht_"/>
+      <viewAttribute id="milieuklasse_eg_goedkeuring_zwaar"/>
+      <viewAttribute id="uitstoot_deeltjes_licht"/>
+      <viewAttribute id="uitstoot_deeltjes_zwaar"/>
+      <viewAttribute id="nettomaximumvermogen"/>
+      <viewAttribute id="nominaal_continu_maximumvermogen"/>
+      <viewAttribute id="roetuitstoot"/>
+      <viewAttribute id="toerental_geluidsniveau"/>
+      <viewAttribute id="emissie_deeltjes_type1_wltp"/>
+      <viewAttribute id="emissie_co2_gecombineerd_wltp"/>
+      <viewAttribute id="emissie_co2_gewogen_gecombineerd_wltp"/>
+      <viewAttribute id="brandstof_verbruik_gecombineerd_wltp"/>
+      <viewAttribute id="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+      <viewAttribute id="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+      <viewAttribute id="actie_radius_enkel_elektrisch_wltp"/>
+      <viewAttribute id="actie_radius_enkel_elektrisch_stad_wltp"/>
+      <viewAttribute id="elektrisch_verbruik_extern_opladen_wltp"/>
+      <viewAttribute id="actie_radius_extern_opladen_wltp"/>
+      <viewAttribute id="actie_radius_extern_opladen_stad_wltp"/>
+      <viewAttribute id="max_vermogen_15_minuten"/>
+      <viewAttribute id="max_vermogen_60_minuten"/>
+      <viewAttribute id="netto_max_vermogen_elektrisch"/>
+      <viewAttribute id="klasse_hybride_elektrisch_voertuig"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="gekentekende_voertuigen">
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="voertuigsoort" source="voertuigsoort"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="merk" source="merk"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="handelsbenaming" source="handelsbenaming"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="vervaldatum_apk" source="vervaldatum_apk"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_tenaamstelling" source="datum_tenaamstelling"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="bruto_bpm" source="bruto_bpm"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="zuinigheidslabel" source="zuinigheidslabel"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_eerste_toelating" source="datum_eerste_toelating"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="datum_eerste_afgifte_nederland" source="datum_eerste_afgifte_nederland"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="catalogusprijs" source="catalogusprijs"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="wam_verzekerd" source="wam_verzekerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="maximale_constructiesnelheid_brom_snorfiets" source="maximale_constructiesnelheid_brom_snorfiets"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="variant" source="variant"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitvoering" source="uitvoering"/>
+    </input>
+    <input node="gekentekende_voertuigen_brandstof">
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_volgnummer" source="brandstof_volgnummer"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_omschrijving" source="brandstof_omschrijving"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_buiten_de_stad" source="brandstofverbruik_buiten_de_stad"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_gecombineerd" source="brandstofverbruik_gecombineerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstofverbruik_stad" source="brandstofverbruik_stad"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="co2_uitstoot_gecombineerd" source="co2_uitstoot_gecombineerd"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="co2_uitstoot_gewogen" source="co2_uitstoot_gewogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="geluidsniveau_rijdend" source="geluidsniveau_rijdend"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="geluidsniveau_stationair" source="geluidsniveau_stationair"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissieklasse" source="emissieklasse"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="milieuklasse_eg_goedkeuring_licht_" source="milieuklasse_eg_goedkeuring_licht_"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="milieuklasse_eg_goedkeuring_zwaar" source="milieuklasse_eg_goedkeuring_zwaar"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitstoot_deeltjes_licht" source="uitstoot_deeltjes_licht"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="uitstoot_deeltjes_zwaar" source="uitstoot_deeltjes_zwaar"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="nettomaximumvermogen" source="nettomaximumvermogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="nominaal_continu_maximumvermogen" source="nominaal_continu_maximumvermogen"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="roetuitstoot" source="roetuitstoot"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="toerental_geluidsniveau" source="toerental_geluidsniveau"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_deeltjes_type1_wltp" source="emissie_deeltjes_type1_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_co2_gecombineerd_wltp" source="emissie_co2_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="emissie_co2_gewogen_gecombineerd_wltp" source="emissie_co2_gewogen_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_verbruik_gecombineerd_wltp" source="brandstof_verbruik_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="brandstof_verbruik_gewogen_gecombineerd_wltp" source="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="elektrisch_verbruik_enkel_elektrisch_wltp" source="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_enkel_elektrisch_wltp" source="actie_radius_enkel_elektrisch_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_enkel_elektrisch_stad_wltp" source="actie_radius_enkel_elektrisch_stad_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="elektrisch_verbruik_extern_opladen_wltp" source="elektrisch_verbruik_extern_opladen_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_extern_opladen_wltp" source="actie_radius_extern_opladen_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="actie_radius_extern_opladen_stad_wltp" source="actie_radius_extern_opladen_stad_wltp"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="max_vermogen_15_minuten" source="max_vermogen_15_minuten"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="max_vermogen_60_minuten" source="max_vermogen_60_minuten"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="netto_max_vermogen_elektrisch" source="netto_max_vermogen_elektrisch"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="klasse_hybride_elektrisch_voertuig" source="klasse_hybride_elektrisch_voertuig"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="kenteken" source="kenteken"/>
+    </input>
+    <joinAttribute name="kenteken"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="kenteken">
+  <attributes>
+    <attribute id="kenteken" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="kenteken"/>
+      <keyMapping columnObjectName="kenteken" columnName="kenteken"/>
+    </attribute>
+    <attribute id="voertuigsoort" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="voertuigsoort"/>
+      <keyMapping columnObjectName="kenteken" columnName="voertuigsoort"/>
+    </attribute>
+    <attribute id="merk" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="merk"/>
+      <keyMapping columnObjectName="kenteken" columnName="merk"/>
+    </attribute>
+    <attribute id="handelsbenaming" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="handelsbenaming"/>
+      <keyMapping columnObjectName="kenteken" columnName="handelsbenaming"/>
+    </attribute>
+    <attribute id="vervaldatum_apk" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="vervaldatum_apk"/>
+      <keyMapping columnObjectName="kenteken" columnName="vervaldatum_apk"/>
+    </attribute>
+    <attribute id="datum_tenaamstelling" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="datum_tenaamstelling"/>
+      <keyMapping columnObjectName="kenteken" columnName="datum_tenaamstelling"/>
+    </attribute>
+    <attribute id="bruto_bpm" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="bruto_bpm"/>
+      <keyMapping columnObjectName="kenteken" columnName="bruto_bpm"/>
+    </attribute>
+    <attribute id="zuinigheidslabel" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="zuinigheidslabel"/>
+      <keyMapping columnObjectName="kenteken" columnName="zuinigheidslabel"/>
+    </attribute>
+    <attribute id="datum_eerste_toelating" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="datum_eerste_toelating"/>
+      <keyMapping columnObjectName="kenteken" columnName="datum_eerste_toelating"/>
+    </attribute>
+    <attribute id="datum_eerste_afgifte_nederland" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="datum_eerste_afgifte_nederland"/>
+      <keyMapping columnObjectName="kenteken" columnName="datum_eerste_afgifte_nederland"/>
+    </attribute>
+    <attribute id="catalogusprijs" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="catalogusprijs"/>
+      <keyMapping columnObjectName="kenteken" columnName="catalogusprijs"/>
+    </attribute>
+    <attribute id="wam_verzekerd" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="wam_verzekerd"/>
+      <keyMapping columnObjectName="kenteken" columnName="wam_verzekerd"/>
+    </attribute>
+    <attribute id="maximale_constructiesnelheid_brom_snorfiets" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="maximale_constructiesnelheid_brom_snorfiets"/>
+      <keyMapping columnObjectName="kenteken" columnName="maximale_constructiesnelheid_brom_snorfiets"/>
+    </attribute>
+    <attribute id="variant" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="variant"/>
+      <keyMapping columnObjectName="kenteken" columnName="variant"/>
+    </attribute>
+    <attribute id="uitvoering" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="uitvoering"/>
+      <keyMapping columnObjectName="kenteken" columnName="uitvoering"/>
+    </attribute>
+    <attribute id="brandstof_volgnummer" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstof_volgnummer"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstof_volgnummer"/>
+    </attribute>
+    <attribute id="brandstof_omschrijving" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstof_omschrijving"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstof_omschrijving"/>
+    </attribute>
+    <attribute id="brandstofverbruik_buiten_de_stad" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstofverbruik_buiten_de_stad"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstofverbruik_buiten_de_stad"/>
+    </attribute>
+    <attribute id="brandstofverbruik_gecombineerd" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstofverbruik_gecombineerd"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstofverbruik_gecombineerd"/>
+    </attribute>
+    <attribute id="brandstofverbruik_stad" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstofverbruik_stad"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstofverbruik_stad"/>
+    </attribute>
+    <attribute id="co2_uitstoot_gecombineerd" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="co2_uitstoot_gecombineerd"/>
+      <keyMapping columnObjectName="kenteken" columnName="co2_uitstoot_gecombineerd"/>
+    </attribute>
+    <attribute id="co2_uitstoot_gewogen" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="co2_uitstoot_gewogen"/>
+      <keyMapping columnObjectName="kenteken" columnName="co2_uitstoot_gewogen"/>
+    </attribute>
+    <attribute id="geluidsniveau_rijdend" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="geluidsniveau_rijdend"/>
+      <keyMapping columnObjectName="kenteken" columnName="geluidsniveau_rijdend"/>
+    </attribute>
+    <attribute id="geluidsniveau_stationair" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="geluidsniveau_stationair"/>
+      <keyMapping columnObjectName="kenteken" columnName="geluidsniveau_stationair"/>
+    </attribute>
+    <attribute id="emissieklasse" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="emissieklasse"/>
+      <keyMapping columnObjectName="kenteken" columnName="emissieklasse"/>
+    </attribute>
+    <attribute id="milieuklasse_eg_goedkeuring_licht_" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="milieuklasse_eg_goedkeuring_licht_"/>
+      <keyMapping columnObjectName="kenteken" columnName="milieuklasse_eg_goedkeuring_licht_"/>
+    </attribute>
+    <attribute id="milieuklasse_eg_goedkeuring_zwaar" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="milieuklasse_eg_goedkeuring_zwaar"/>
+      <keyMapping columnObjectName="kenteken" columnName="milieuklasse_eg_goedkeuring_zwaar"/>
+    </attribute>
+    <attribute id="uitstoot_deeltjes_licht" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="uitstoot_deeltjes_licht"/>
+      <keyMapping columnObjectName="kenteken" columnName="uitstoot_deeltjes_licht"/>
+    </attribute>
+    <attribute id="uitstoot_deeltjes_zwaar" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="uitstoot_deeltjes_zwaar"/>
+      <keyMapping columnObjectName="kenteken" columnName="uitstoot_deeltjes_zwaar"/>
+    </attribute>
+    <attribute id="nettomaximumvermogen" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="nettomaximumvermogen"/>
+      <keyMapping columnObjectName="kenteken" columnName="nettomaximumvermogen"/>
+    </attribute>
+    <attribute id="nominaal_continu_maximumvermogen" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="nominaal_continu_maximumvermogen"/>
+      <keyMapping columnObjectName="kenteken" columnName="nominaal_continu_maximumvermogen"/>
+    </attribute>
+    <attribute id="roetuitstoot" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="roetuitstoot"/>
+      <keyMapping columnObjectName="kenteken" columnName="roetuitstoot"/>
+    </attribute>
+    <attribute id="toerental_geluidsniveau" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="toerental_geluidsniveau"/>
+      <keyMapping columnObjectName="kenteken" columnName="toerental_geluidsniveau"/>
+    </attribute>
+    <attribute id="emissie_deeltjes_type1_wltp" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="emissie_deeltjes_type1_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="emissie_deeltjes_type1_wltp"/>
+    </attribute>
+    <attribute id="emissie_co2_gecombineerd_wltp" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="emissie_co2_gecombineerd_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="emissie_co2_gecombineerd_wltp"/>
+    </attribute>
+    <attribute id="emissie_co2_gewogen_gecombineerd_wltp" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="emissie_co2_gewogen_gecombineerd_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="emissie_co2_gewogen_gecombineerd_wltp"/>
+    </attribute>
+    <attribute id="brandstof_verbruik_gecombineerd_wltp" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstof_verbruik_gecombineerd_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstof_verbruik_gecombineerd_wltp"/>
+    </attribute>
+    <attribute id="brandstof_verbruik_gewogen_gecombineerd_wltp" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="brandstof_verbruik_gewogen_gecombineerd_wltp"/>
+    </attribute>
+    <attribute id="elektrisch_verbruik_enkel_elektrisch_wltp" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="elektrisch_verbruik_enkel_elektrisch_wltp"/>
+    </attribute>
+    <attribute id="actie_radius_enkel_elektrisch_wltp" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="actie_radius_enkel_elektrisch_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="actie_radius_enkel_elektrisch_wltp"/>
+    </attribute>
+    <attribute id="actie_radius_enkel_elektrisch_stad_wltp" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="actie_radius_enkel_elektrisch_stad_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="actie_radius_enkel_elektrisch_stad_wltp"/>
+    </attribute>
+    <attribute id="elektrisch_verbruik_extern_opladen_wltp" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="elektrisch_verbruik_extern_opladen_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="elektrisch_verbruik_extern_opladen_wltp"/>
+    </attribute>
+    <attribute id="actie_radius_extern_opladen_wltp" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="actie_radius_extern_opladen_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="actie_radius_extern_opladen_wltp"/>
+    </attribute>
+    <attribute id="actie_radius_extern_opladen_stad_wltp" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="actie_radius_extern_opladen_stad_wltp"/>
+      <keyMapping columnObjectName="kenteken" columnName="actie_radius_extern_opladen_stad_wltp"/>
+    </attribute>
+    <attribute id="max_vermogen_15_minuten" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="max_vermogen_15_minuten"/>
+      <keyMapping columnObjectName="kenteken" columnName="max_vermogen_15_minuten"/>
+    </attribute>
+    <attribute id="max_vermogen_60_minuten" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="max_vermogen_60_minuten"/>
+      <keyMapping columnObjectName="kenteken" columnName="max_vermogen_60_minuten"/>
+    </attribute>
+    <attribute id="netto_max_vermogen_elektrisch" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="netto_max_vermogen_elektrisch"/>
+      <keyMapping columnObjectName="kenteken" columnName="netto_max_vermogen_elektrisch"/>
+    </attribute>
+    <attribute id="klasse_hybride_elektrisch_voertuig" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="klasse_hybride_elektrisch_voertuig"/>
+      <keyMapping columnObjectName="kenteken" columnName="klasse_hybride_elektrisch_voertuig"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="221.11302679000914" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92.00000000000003" y="376.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="gekentekende_voertuigen_brandstof" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302.00000000000006" y="376.9999988079071"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="kenteken" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="221.11302679000914" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="kenteken" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="312.2197265625"/>
+    </shape>
+    <shape modelObjectName="gekentekende_voertuigen_brandstof" modelObjectNameSpace="kenteken" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="415" y="22"/>
+      <rectangleSize width="274.92822265625"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

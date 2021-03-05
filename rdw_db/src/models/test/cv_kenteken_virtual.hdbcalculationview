@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models.dim::cv_kenteken_virtual" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="rdw_hana.rdw_db.models.test::cv_kenteken_virtual" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
 <descriptions defaultDescription="cv_kenteken_virtual"/>
 <localVariables/>
 <variableMappings/>
@@ -115,21 +115,21 @@
 <layout>
   <shapes>
     <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-      <upperLeftCorner x="221.11302679000914" y="112"/>
+      <upperLeftCorner x="221" y="112"/>
     
       <rectangleSize width="160"/>
     </shape>
   
     <shape expanded="true" modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="92.00000000000001" y="376.9999988079071"/>
+      <upperLeftCorner x="92" y="376"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="gekentekende_voertuigen_brandstof" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="302.00000000000006" y="376.9999988079071"/>
+      <upperLeftCorner x="302" y="376"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape expanded="true" modelObjectName="kenteken" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="221.11302679000914" y="217"/>
+      <upperLeftCorner x="221" y="217"/>
       <rectangleSize height="30" width="160"/>
     </shape>
     <shape modelObjectName="gekentekende_voertuigen" modelObjectNameSpace="kenteken" modelObjectType="JoinNodeInput">
