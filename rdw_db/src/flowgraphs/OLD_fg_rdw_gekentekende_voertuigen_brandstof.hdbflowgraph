@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowgraph:ContainerNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="d428d2c3820055653ff3fae5b99b9fb8" name="fg_rdw_gekentekende_voertuigen_brandstof" runtimeBehavior="BATCH_TASK">
+  <annotations key="sap.afm.layout" xmi:id="f03b52dc65cb28504d17b1c377efb7f7">
+    <annotations xmi:id="d3715fb678d44d2fa524e1b76e454c1b" key="x" value="10">
+    </annotations>
+    <annotations xmi:id="17c58483cf4452f35902b22c09163461" key="y" value="10">
+    </annotations>
+    <annotations xmi:id="2b351357fdc52e960a454e5c979198a8" key="width" value="100">
+    </annotations>
+    <annotations xmi:id="beee7df4837e98e02bd07dadf4ded2a6" key="height" value="84">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="034983f7de8e7e43394f7cf7a386ce3c" key="sap.afm.palette">
+    <annotations xmi:id="6a3b6738e7cb36a817346fbb35b16905" key="additions" value="">
+    </annotations>
+  </annotations>
+  <annotations xmi:id="b3b203f8ce03074275bb7d6037ba1652" key="sap.afm.nodeType" value="ContainerNode">
+  </annotations>
+  <annotations xmi:id="f2040e6c8b5e403e235c77e4b263f979" key="sap.afm.nodeInputs">
+  </annotations>
+  <annotations xmi:id="86dda8fe551d2ecfb117cc5ebd2fc3a0" key="sap.afm.nodeOutputs">
+  </annotations>
+  <annotations xmi:id="38ecc78cbc5221a1cc0bd4c74e32b6fd" key="sap.im.taskPartitions">
+    <annotations xmi:id="194eaa1febb711814986815d39379215" key="sap.im.partition">
+      <annotations xmi:id="b6a3a6ec1456199b609447894b254bee" key="name" value="1">
+      </annotations>
+      <annotations xmi:id="c8b9c6642bb416b996acda13087eee9c" key="value" value="(&quot;kenteken&quot; &lt;= &#x27;08XNDH&#x27;)">
+      </annotations>
+      <annotations xmi:id="5a41f5a795eb3ad8e65f05ce0ab2f80d" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="27b2a8207fec0ae4e2480e754de919dc" key="sap.im.partition">
+      <annotations xmi:id="b474f27f69ce0915ddac6b9144472794" key="name" value="2">
+      </annotations>
+      <annotations xmi:id="ccf10856a41f94c2a59f7fc3736a79f6" key="value" value="(&quot;kenteken&quot; &gt; &#x27;08XNDH&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;17HHH8&#x27;)">
+      </annotations>
+      <annotations xmi:id="9eb73aa27342988d3dde95540167c7e3" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="0313de32f6e1ac6a0e64058cd34573fd" key="sap.im.partition">
+      <annotations xmi:id="ff4ea43cd7f0e21563376f6e550ae741" key="name" value="3">
+      </annotations>
+      <annotations xmi:id="f7d4c60efbb86c869aaf97fb70fe0b72" key="value" value="(&quot;kenteken&quot; &gt; &#x27;17HHH8&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;23LLD2&#x27;)">
+      </annotations>
+      <annotations xmi:id="5b2176e9ca2cb8c6f5f2e02922411065" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="8524f9b068afe1be952263f20b12f34f" key="sap.im.partition">
+      <annotations xmi:id="be44a9540102f15f77fde0e6994f3055" key="name" value="4">
+      </annotations>
+      <annotations xmi:id="675706a6634d32f52e292beb87959d9c" key="value" value="(&quot;kenteken&quot; &gt; &#x27;23LLD2&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;2XRS14&#x27;)">
+      </annotations>
+      <annotations xmi:id="9b69458dd5e9074d465c7400c5edad78" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="9daad93fdbca9f216b4fd46091190c6d" key="sap.im.partition">
+      <annotations xmi:id="b29874a284e74eb4c6f35af90d164ceb" key="name" value="5">
+      </annotations>
+      <annotations xmi:id="8b09368b59ad4112a6280ed02c1c6ced" key="value" value="(&quot;kenteken&quot; &gt; &#x27;2XRS14&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;37VTT2&#x27;)">
+      </annotations>
+      <annotations xmi:id="e7395661cb8e6d454deeba4296672c44" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="6fa00a517fbb7c5d2cab07a77302a75b" key="sap.im.partition">
+      <annotations xmi:id="624c2580ec4bc8e4efa9c85b0216c397" key="name" value="6">
+      </annotations>
+      <annotations xmi:id="8a4fb4426357c0be8b8f452b548f6ef6" key="value" value="(&quot;kenteken&quot; &gt; &#x27;37VTT2&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;43ZRD7&#x27;)">
+      </annotations>
+      <annotations xmi:id="822cc79455339aa3b0b18eab06a513b9" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="a8b703f1f813dfaa274430a6ec5b6a3e" key="sap.im.partition">
+      <annotations xmi:id="5e3b42790c3d4b822f59d48abb624b64" key="name" value="7">
+      </annotations>
+      <annotations xmi:id="4085e39addf94eb8b7883d69cbd93f85" key="value" value="(&quot;kenteken&quot; &gt; &#x27;43ZRD7&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;50GHP8&#x27;)">
+      </annotations>
+      <annotations xmi:id="a90e81c4b30906fc1c8ef9bba78bf5dc" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="68b2df8529f86aa0194e75bdd0742d2f" key="sap.im.partition">
+      <annotations xmi:id="0881e510bcfe9534830068cd4ebf63e2" key="name" value="8">
+      </annotations>
+      <annotations xmi:id="0ac202f654a38a357b2ecc420ceb55a2" key="value" value="(&quot;kenteken&quot; &gt; &#x27;50GHP8&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;58NKSF&#x27;)">
+      </annotations>
+      <annotations xmi:id="fda6687373b6a213dc09eab8f8dcf54e" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="c8891f0a7d1b57439562c6f7880b3027" key="sap.im.partition">
+      <annotations xmi:id="93b7026131318aae341bdda32e89385c" key="name" value="9">
+      </annotations>
+      <annotations xmi:id="cff11201dc7cbfd5989421cbbc350868" key="value" value="(&quot;kenteken&quot; &gt; &#x27;58NKSF&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;64RPF5&#x27;)">
+      </annotations>
+      <annotations xmi:id="73a92aac17ec62919fc8f585d1786f24" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="1c03e39c3ef38524b0748a7817edbc32" key="sap.im.partition">
+      <annotations xmi:id="b9449973e5269641a69576680d34b6f3" key="name" value="10">
+      </annotations>
+      <annotations xmi:id="f4eef1b05feffad92b5a58d7b47a41df" key="value" value="(&quot;kenteken&quot; &gt; &#x27;64RPF5&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;70TTR1&#x27;)">
+      </annotations>
+      <annotations xmi:id="c359f67b5d775c764de05dab42c1de3e" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="864040855731d85defaaaabeeee9b670" key="sap.im.partition">
+      <annotations xmi:id="7e82b4cfbed350afdb2ae3f80291b391" key="name" value="11">
+      </annotations>
+      <annotations xmi:id="6aa9fdb4a6c61025e934215b96d0622d" key="value" value="(&quot;kenteken&quot; &gt; &#x27;70TTR1&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;79FRK9&#x27;)">
+      </annotations>
+      <annotations xmi:id="b7958abe0b41e2c4395cae75d1cd4593" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="64c00816847c736636b54a86a744a277" key="sap.im.partition">
+      <annotations xmi:id="39cf7a00c0ebc1517ffe41bc47e01116" key="name" value="12">
+      </annotations>
+      <annotations xmi:id="bd73f8cd9aa62fb7465dee80ef105993" key="value" value="(&quot;kenteken&quot; &gt; &#x27;79FRK9&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;85JTP6&#x27;)">
+      </annotations>
+      <annotations xmi:id="d1fd5cfe5f692657d1aa7eafdf6fbdcf" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="99b462dc2f40e9c4243ce73bfe754a32" key="sap.im.partition">
+      <annotations xmi:id="6b4006d5ec126d36180f8153cd3f1772" key="name" value="13">
+      </annotations>
+      <annotations xmi:id="389ccb3141f4e8e85736ebc685f3836e" key="value" value="(&quot;kenteken&quot; &gt; &#x27;85JTP6&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;91NKLK&#x27;)">
+      </annotations>
+      <annotations xmi:id="a7eb9475c09dc46caa4ad01aee004c91" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="01891a96c32c8dfdfb225b5da81015e8" key="sap.im.partition">
+      <annotations xmi:id="aa43bac42d51cb7a00103d1f9c96b813" key="name" value="14">
+      </annotations>
+      <annotations xmi:id="16a88e54155db0cd19fdca9b118d5f23" key="value" value="(&quot;kenteken&quot; &gt; &#x27;91NKLK&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;99TLH9&#x27;)">
+      </annotations>
+      <annotations xmi:id="2e62b917e9546b5ac6df5dc2ba64f8a4" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="ac71096a73c82fd1290cb0c439ce4a09" key="sap.im.partition">
+      <annotations xmi:id="a96598fd29efeecb7140ea140b745d69" key="name" value="15">
+      </annotations>
+      <annotations xmi:id="cee8345f2254e4879895ee305281b990" key="value" value="(&quot;kenteken&quot; &gt; &#x27;99TLH9&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;DBR66B&#x27;)">
+      </annotations>
+      <annotations xmi:id="4057bf1c1ab41559f18b9575f3106b57" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="fa92efeaa9358a71a8a361ad005433ff" key="sap.im.partition">
+      <annotations xmi:id="7c02c761f52de093ff1b10cb22dbd81d" key="name" value="16">
+      </annotations>
+      <annotations xmi:id="5e4bf949c91f8bdd7639a5b857aca894" key="value" value="(&quot;kenteken&quot; &gt; &#x27;DBR66B&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;DXT84H&#x27;)">
+      </annotations>
+      <annotations xmi:id="601442da094fc2f78dded38bfa6908e5" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="9ba021e4d4c934aef75fb95421ae28bd" key="sap.im.partition">
+      <annotations xmi:id="a935ed1a724add576fe36a08db1a7b85" key="name" value="17">
+      </annotations>
+      <annotations xmi:id="b228704eaee89e02136518ffc249bf27" key="value" value="(&quot;kenteken&quot; &gt; &#x27;DXT84H&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;G251RZ&#x27;)">
+      </annotations>
+      <annotations xmi:id="0ab9fd636f032e09ff2ec1b07ee0092a" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="20cda1df9c6dca01a3ddfbcfd14dac3a" key="sap.im.partition">
+      <annotations xmi:id="f10e4c2873acd6c0b024d01f617a70a1" key="name" value="18">
+      </annotations>
+      <annotations xmi:id="1da80e480e01c529bbedee02bcc08eb2" key="value" value="(&quot;kenteken&quot; &gt; &#x27;G251RZ&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;H231TP&#x27;)">
+      </annotations>
+      <annotations xmi:id="fcdf05be8ab6fb11cf70b3d60e5a3c96" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="5b98b72ee9266b82fad6a89f97e5c572" key="sap.im.partition">
+      <annotations xmi:id="9b85f1036455ad6929420db9d9947e52" key="name" value="19">
+      </annotations>
+      <annotations xmi:id="e7a798663061ddbe5c1abb1c8975855d" key="value" value="(&quot;kenteken&quot; &gt; &#x27;H231TP&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;JH039J&#x27;)">
+      </annotations>
+      <annotations xmi:id="b6e8bdc49066fc9f7ce80f7314b960fb" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="c9c084fff0bdde66be1f137195928ab0" key="sap.im.partition">
+      <annotations xmi:id="ea039a2164ba955b6cda100d0bff610e" key="name" value="20">
+      </annotations>
+      <annotations xmi:id="75a84ddf6813acfe7564c9a4122c3d57" key="value" value="(&quot;kenteken&quot; &gt; &#x27;JH039J&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;MBGZ90&#x27;)">
+      </annotations>
+      <annotations xmi:id="e037ef888a9c4b7651f0c24e98b55a5a" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="1ac5b8af1436882097230768ced00dd1" key="sap.im.partition">
+      <annotations xmi:id="40975c90d65d3645fb8d7fbf4ba2537a" key="name" value="21">
+      </annotations>
+      <annotations xmi:id="11ffc7392de3cc3f38a80b4864a8b1f8" key="value" value="(&quot;kenteken&quot; &gt; &#x27;MBGZ90&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;MZHX54&#x27;)">
+      </annotations>
+      <annotations xmi:id="f508c5660e5fbe5c803717585ae02e72" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="d565c58705a4c92889ebb49f03980300" key="sap.im.partition">
+      <annotations xmi:id="a76304b5dc227e1265761dd17a0fd3a6" key="name" value="22">
+      </annotations>
+      <annotations xmi:id="a7d8716c5982d1e46fbaf9d49bf08fb7" key="value" value="(&quot;kenteken&quot; &gt; &#x27;MZHX54&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;PS348P&#x27;)">
+      </annotations>
+      <annotations xmi:id="b883d305b2ebf974270e5813b996895e" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="1f108e74c56f8e7ad6b78a4f4caeaf42" key="sap.im.partition">
+      <annotations xmi:id="1ac41b4e3681e4324592cb75251ef1c5" key="name" value="23">
+      </annotations>
+      <annotations xmi:id="7500c1fa7a05cef8b77d02fa361b91dc" key="value" value="(&quot;kenteken&quot; &gt; &#x27;PS348P&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;SK988S&#x27;)">
+      </annotations>
+      <annotations xmi:id="3ff53f60369d9978d2e6dd8d3fabb712" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="24b51bceb88d748c565419e0df7f684e" key="sap.im.partition">
+      <annotations xmi:id="2ff08fe25a7683186b4bda7ef1486dc2" key="name" value="24">
+      </annotations>
+      <annotations xmi:id="a5f0d65b25a2975d1fe6f1c8704e5402" key="value" value="(&quot;kenteken&quot; &gt; &#x27;SK988S&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;V102TG&#x27;)">
+      </annotations>
+      <annotations xmi:id="114a207099388692d4d11bee07452845" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="8f6cb45070a7704a78f406c6d870420a" key="sap.im.partition">
+      <annotations xmi:id="7cb0adc7c85f44311f36e2804cf01bbd" key="name" value="25">
+      </annotations>
+      <annotations xmi:id="794fe4ac9bccd4b642e17ae14366bf0a" key="value" value="(&quot;kenteken&quot; &gt; &#x27;V102TG&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;VS697K&#x27;)">
+      </annotations>
+      <annotations xmi:id="39031b2491145f92a3efb0203a4fbea3" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="520fa0d2efb3c12360b306c2c551b588" key="sap.im.partition">
+      <annotations xmi:id="48ab5528334fdf85c3d2af7c59872db3" key="name" value="26">
+      </annotations>
+      <annotations xmi:id="61aeb81fe4b7952b3b876782055518bc" key="value" value="(&quot;kenteken&quot; &gt; &#x27;VS697K&#x27;) AND (&quot;kenteken&quot; &lt;= &#x27;ZF394D&#x27;)">
+      </annotations>
+      <annotations xmi:id="3cef23477bdbf3bb56460bab010f4782" key="count" value="500000">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="6f216432495ee52378e7fff8f0b535ce" key="sap.im.partition">
+      <annotations xmi:id="398076cc12b83fff445dbc370b966323" key="name" value="27">
+      </annotations>
+      <annotations xmi:id="5ee4eaa7527f0bf57c277aa48e05ad5c" key="value" value="(&quot;kenteken&quot; &gt; &#x27;ZF394D&#x27;)">
+      </annotations>
+      <annotations xmi:id="fd97912112987cd0ad213b48696e423c" key="count" value="246411">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="90b08751834d6bfe380c1f6f4ac1ce62" key="source" value="vt_rdw_gekentekende_voertuigen_brandstof">
+    </annotations>
+    <annotations xmi:id="3da352cf01a6b5b6e9abc10dd10344b0" key="type" value="filterClausePartition">
+    </annotations>
+    <annotations xmi:id="4ca46a2e372b6011f5927571ee1f556a" key="numRecordsPerPartition" value="500000">
+    </annotations>
+    <annotations xmi:id="2c8a9a8a7dbf564746f024966eb7cf15" key="partitionNamePrefix">
+    </annotations>
+    <annotations xmi:id="301f6da7062a992ed2a01b8593eff6cf" key="columnsStrict" value="true">
+    </annotations>
+    <annotations xmi:id="4d7514bbacda9a8ef1c8a5860c59d2d5" key="partitionColumn">
+      <annotations xmi:id="9fc4b9bafd90cb8148e1ff9f0e779ce9" key="name" value="kenteken">
+      </annotations>
+    </annotations>
+  </annotations>
+  <annotations xmi:id="4e381f476f0ba0b33eac45d78916545d" key="sap.im.explicitTypeConversion" value="true">
+  </annotations>
+  <tableMappings xmi:id="b0085ac11170a698b980a4322b42b4ee" source="56c48cdcf3cc7a271e3b49af066df130" target="2e5e9a8202bb053fee6c0d5c945e2f30">
+    <attributeMappings xmi:id="b654c10a656b3c0bcda85643b04681a5" source="45c33b53787edbbdda9c797be2e569d6" target="6f7962539baa92c7ef764217fb213b34">
+    </attributeMappings>
+    <attributeMappings xmi:id="5f4f46dfce1a507f75db2efffc2385bb" source="84268d3c6b880fdb031316c0d4e613c5" target="96eaa3cf9346761d9346c91ac7a61378">
+    </attributeMappings>
+    <attributeMappings xmi:id="f7e44687160cd7ac9de25d843a5aa42f" source="037de55c91671f4ccc3832b82e50ea23" target="8416e5b93c9495215aecee425ec9d491">
+    </attributeMappings>
+    <attributeMappings xmi:id="6bd6799690132cf0d74add2172408c69" source="ad239f1df8134136a7e9913e7c594906" target="b23dbe8039c5aba9813fb57db9117b60">
+    </attributeMappings>
+    <attributeMappings xmi:id="bfe58f815df5e22e1c37e5cbb598607c" source="d2f89ddf9fdecfdfc46c7b1df09ae489" target="3a003375d68425ee5179b07004758e27">
+    </attributeMappings>
+    <attributeMappings xmi:id="f634aa1664cd1d1ec1707977e47d0a54" source="f17a7fd942fe57aff3c6263c038e5efc" target="109bc734e2634f257119c5086cf29316">
+    </attributeMappings>
+    <attributeMappings xmi:id="07326b9712c5d436a88c149f5324e2dc" source="f4632aa539e70b3831402b8e89933cdc" target="85d3615a17b22744e36985dfacc3d7e0">
+    </attributeMappings>
+    <attributeMappings xmi:id="2b0560c0eb7cd7285ecdf4d94e5a3a0a" source="5ab5e6e7bc105013b9dd2f771c5a05f3" target="ce7e5ce5f92116b6b27bbbd78203e1f8">
+    </attributeMappings>
+    <attributeMappings xmi:id="0bb2142eadf7edf149d2c396cbc37b76" source="5823cdc1f976cf7649ccefff7ed6a1d0" target="83c2910036a72d3dfb655f317c7baa17">
+    </attributeMappings>
+    <attributeMappings xmi:id="da266c4ade783f594ac72492b7932ac5" source="d956696197387f2f0abf5bf49d5574a9" target="36216394ec34f63be2505de524bbc96a">
+    </attributeMappings>
+    <attributeMappings xmi:id="f94bda66bd3342c60252f5ee10fc9087" source="2d3b608d6ed92286961e47e07d9a4037" target="7f4509fb1ec08e3619c36dff6e1f8086">
+    </attributeMappings>
+    <attributeMappings xmi:id="ade607d8dc8509552bbd590394fc719f" source="4960fd8a87535db0881d392b99e239d9" target="0bfe42a6ac89939476473b5e8ed7395c">
+    </attributeMappings>
+    <attributeMappings xmi:id="8a0b0a7e8a0f21a9a1060e89c9a1c1e5" source="621c06cf85050c24f447d83f955d2e6a" target="eb38b7ecb28780f4570bf56c3a6219e4">
+    </attributeMappings>
+    <attributeMappings xmi:id="6e088c604849cf23d5f001116f4ba260" source="31f41febfe00e15b9bfa913a1b16732f" target="5aaf74cbe00db20e4813b1c780eddb9a">
+    </attributeMappings>
+    <attributeMappings xmi:id="370af2bd6751a74e5fc63be3d6c41672" source="df4507669b649284413faa07d95f8125" target="58a9b8a7fde911c24b72a7b935ebf4ad">
+    </attributeMappings>
+    <attributeMappings xmi:id="f10beac6fcbd5fd639eee6fab134d9ea" source="661e8bb1e29efe26f46ad221cdf44eee" target="3051df2d375edaef6e33e30a1129e530">
+    </attributeMappings>
+    <attributeMappings xmi:id="fd1998ddfb6d08a7db411a3ba9891b6a" source="563c4cf3b84cce618c0a7a62524bcab2" target="f9c673c603b34ad95cffcb96c34f8e0e">
+    </attributeMappings>
+    <attributeMappings xmi:id="7d55ff25d3f5a4e2f2fdc0c05947bf73" source="20732caec90f36d8410aef8d12e4d93a" target="ef9f10cde23c4919c285f6f6262b59d0">
+    </attributeMappings>
+    <attributeMappings xmi:id="fadd8748ca5cd24f7a8ef0e3a501b1b8" source="8ee69bf98db1cef44debca927aa8fc93" target="5ce5052299b05d861ac29fcd79ea906e">
+    </attributeMappings>
+    <attributeMappings xmi:id="603487d7f3faa038fedf9182c4b5bea5" source="b8dab5bc02609f71ec62df465a632de5" target="1b77e0bd5f64c4e02d8a742f1a59d4e7">
+    </attributeMappings>
+    <attributeMappings xmi:id="0b3e35f7925e25284ea2bd4cee0d65a2" source="4fb6265acd053642cc87bfbaec9a69fe" target="9d074a71f0d412044576d923697ac382">
+    </attributeMappings>
+    <attributeMappings xmi:id="7c03e16cec3f08978918c645cc3a57cd" source="0e3e24d163101b1e6653a1331ec7c545" target="6eb66f64ea1dfda06df139c6b09632d8">
+    </attributeMappings>
+    <attributeMappings xmi:id="2475e0a7f836ccb9a5dadfa99c329197" source="9a45c3711761691ced0bf744ca81d00c" target="40ab3fe215bcdf961db25743fef0a5c7">
+    </attributeMappings>
+    <attributeMappings xmi:id="84a20160e18a025186ac18f12c336d8c" source="288629666365da01bf63f364607af472" target="6df19236585af938b9f17178cdb9007c">
+    </attributeMappings>
+    <attributeMappings xmi:id="0cb9dafaa66bbcdc747d0a4355adf9a6" source="9ddc56acf79e0d7620dd2c44351d85f1" target="09a48bf76b307d078a11be9538755b25">
+    </attributeMappings>
+    <attributeMappings xmi:id="b6c1e18166b02aa2bf639c5adecda570" source="7790062235b81adc14e72bb59ecdeaf7" target="6d210622cce7f801ffeb18f2d518e087">
+    </attributeMappings>
+    <attributeMappings xmi:id="230a5b444cd33ad65ce16dd8b80a56ab" source="fbed75605658c6a1369f5dc426e36cac" target="b486b71d923811cde8a977d8739e8bf0">
+    </attributeMappings>
+    <attributeMappings xmi:id="09e4c640db19e0b8765cc539d0e26bff" source="aaa6aefbe625ed354e58cb876a0d51cc" target="f79a6b8b13855a493794f19389e6bcb9">
+    </attributeMappings>
+    <attributeMappings xmi:id="f850695fa5f6758f597bef5d72f97f38" source="0d27df4cac8119ec4bbdbc5334e9aa66" target="98748ba59d6a05cfcce8ad90d84f7c6d">
+    </attributeMappings>
+    <attributeMappings xmi:id="21763c0e992246189be7d430278b8a23" source="2c13bce14f42ed4598182b6d7873f633" target="28f4ed243f841c2c58b72a2cdd8bc9bd">
+    </attributeMappings>
+    <attributeMappings xmi:id="6ddbb12738c36cb37f28cc930b576e2b" source="46e82779e8be44f80a52419a84e3b667" target="8800a340abb35c81ec6412370a5665bd">
+    </attributeMappings>
+    <attributeMappings xmi:id="afd3a19ea578667120c2537f3852af5d" source="25c23e3be16567d9d646e8732f9aa0bf" target="58b7841f7f23c52c316ba15378a15a7d">
+    </attributeMappings>
+    <attributeMappings xmi:id="b6ddb5c70fb29702afc9dd7500819d70" source="796cb28b6f0a1133deb115cb482d6018" target="18935844866941f11e8be36fb6a9edbe">
+    </attributeMappings>
+    <attributeMappings xmi:id="e7cee50a495a10df57c35bbf193c9993" source="557c9634cd8db9fef83d9e52e1279ae2" target="37d64224ab8658df335ee219cb2185a9">
+    </attributeMappings>
+    <attributeMappings xmi:id="425eb5ce2c21b89b0768597980aae32e" source="9bee49749f64eb69914ec0d423ec5594" target="bb09441881e0176f832dd21421a46d01">
+    </attributeMappings>
+    <attributeMappings xmi:id="3917b091c3b99921c71253b1a1fb7813" source="cbbd70ff764ed70f5eeb248b2428a5ad" target="72eb739df18dffedff1e951954beda86">
+    </attributeMappings>
+    <attributeMappings xmi:id="53c1b29adeec84b998a56456768a3e26" source="7ee9ef0744106e6f6627803b94b15895" target="d44d1150bbaef858226355534fc33f83">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="4a61d382cfd6240d99457e4d155e6e29" source="5319a55c9b1712f33dc82e9b015e1394" target="36460ab75f5bf02bd21d9505539af8e7">
+    <attributeMappings xmi:id="345deb0dcad0b878c63f09c2e67876bc" source="c8461a128f9fbeb23408c18422d9aa26" target="0966c8ce4ecf2fa0b0ab2ed8431d5397">
+    </attributeMappings>
+    <attributeMappings xmi:id="038e67ba5537220e9192b014da1b9499" source="df07e85bb488572db4dcda0fd1b0a815" target="614daf4dd8a8a864dce08fd70df1eec9">
+    </attributeMappings>
+    <attributeMappings xmi:id="1b00f8ff5aff1fd46b4fd6efb0f7512e" source="299423b7e9c76255a8e9633acd0d30e9" target="8dbc089bae6669a0c73ae53215c64ea4">
+    </attributeMappings>
+    <attributeMappings xmi:id="b0cd40356855d20f0437689d0d0cd621" source="364af9f19d8476c137f0eb0849e6f9d7" target="7aa899f7f88cc6e050f633995e86838f">
+    </attributeMappings>
+    <attributeMappings xmi:id="ec33973d323cd5ffac76f429ab4485ef" source="8a4a66969c37c14fd5bf1f9cfc34350c" target="060b337fa4e7e244e37037e439dfd062">
+    </attributeMappings>
+    <attributeMappings xmi:id="228e3ee524cc836c20be22e99b571664" source="786744757a633cecc7f37991518455ee" target="f58664299d629e937ca8dca3a4f9e97d">
+    </attributeMappings>
+    <attributeMappings xmi:id="d2370baabb6ca0e59b65bf1bd21a5f27" source="0df249b6552514799a7e48c264ee879c" target="76b0756af3aa0097408c9a20a58d7680">
+    </attributeMappings>
+    <attributeMappings xmi:id="b1a9d49785d06867a459031995378a0d" source="9460f8eb10c81e4b2c0ab6e057928a35" target="58dfed9b825860c6bfcd1a0ac515a882">
+    </attributeMappings>
+    <attributeMappings xmi:id="d5d47d1524ff692967f9ea61df40b558" source="99199c7d2b1b88f3efbaf2439f1ccaa0" target="4722a6a1e6725ebbd687e554a5f1cc5a">
+    </attributeMappings>
+    <attributeMappings xmi:id="957119e9d2a7c4071a3265417a755e6e" source="c16ab3d41295d3efcece98e0b69b72b1" target="8f1745f9fe2ba0cf6cfeeef3ecc99d14">
+    </attributeMappings>
+    <attributeMappings xmi:id="48926cd15a23fc6ff08d98af45cf6f0e" source="576e98f3e0f5321264f8afd62ac5138c" target="753c9cea809d4fd53a8844586bcfb672">
+    </attributeMappings>
+    <attributeMappings xmi:id="371bdc73b9d118b8be73d0c4386283dd" source="6d5de7fe3677f113e40d404ece52ef47" target="920239eb14e7ab34c6ab9a590e713abf">
+    </attributeMappings>
+    <attributeMappings xmi:id="1b94ec76c0b5854711c543dd859acc62" source="68da026eb7dceccce076d21d53951ed1" target="6e16e8bf90f0b6f0742cf98e6eb58aab">
+    </attributeMappings>
+    <attributeMappings xmi:id="6763dce9a33b973d1c19fc3a404ac39f" source="898f973a1f199a83fc5aebdda5a6a191" target="22baaba96929b27346284736efe925d3">
+    </attributeMappings>
+    <attributeMappings xmi:id="27cec79768bfdc471b94bfc23f049535" source="9fb1c56dfad32276aa0ac31476a981a4" target="f062dd0216170ef5a7fa4dd93d224316">
+    </attributeMappings>
+    <attributeMappings xmi:id="a4f4ed0d629c093e01d748cba1b540bc" source="cf1266e960648be515660788968de577" target="641efa7e8ce1882ef7eb184b682c538f">
+    </attributeMappings>
+    <attributeMappings xmi:id="396af2ae8551c682fd5c2a0ac27dd1dc" source="88ccd274d4dd12cd05d2814791d68b0a" target="479969d7fbd1bf7021559ff7bafc0167">
+    </attributeMappings>
+    <attributeMappings xmi:id="768e126fc74c7820500341a9dd599952" source="1609d4e31f60b40f8cd106d4f2b57f5b" target="23e3576792af637864bf0d5155333b96">
+    </attributeMappings>
+    <attributeMappings xmi:id="141158b158d886a7921c493d12f2a352" source="00ddee29013791fee3cfdfde835839a2" target="e23379b0fb20fd2d72a39f6d8b99148f">
+    </attributeMappings>
+    <attributeMappings xmi:id="0178c4bc3186a5a03c5f57892fd9d02f" source="78d958abd69f6646a6579b0be82217f5" target="f001e3e02ca028b0dcba395ea48b8da7">
+    </attributeMappings>
+    <attributeMappings xmi:id="d5616214b78f763aa8ce9cad2c0f7f78" source="9718f3bf30e4869186d01a3648426939" target="f9372b1955ea6bdba8950bf1000ae54c">
+    </attributeMappings>
+    <attributeMappings xmi:id="668ea5717ed66189ecf8d3caa340e22c" source="b8428a52cf74b4b500c3bd1573eadc6e" target="9851e0ce79c3751bd236f7946ae96ea4">
+    </attributeMappings>
+    <attributeMappings xmi:id="55bfc14b589467ecbe95f2c22eb780d1" source="f07b563a8d768b4f1f5e881a46b30c2f" target="3d3e5363f243e492426565912fbdfd75">
+    </attributeMappings>
+    <attributeMappings xmi:id="858040cfd1ae3e3dbf886436fe271da8" source="476a7e334d4f2fe4fd1e7b9cd6651c2f" target="e180737b83e95bdbc8f82c7bdfc9b19b">
+    </attributeMappings>
+    <attributeMappings xmi:id="ef1ec5c7723b12cc92f44decbc98ed91" source="8fd73fe643b057bc9749842708921221" target="e1fd258bb78e8a73e3b791d80ee7d412">
+    </attributeMappings>
+    <attributeMappings xmi:id="f035dedd09a4183d49d0e4663e603ea6" source="4444506501ccfeba4a886fb188664f58" target="874f8b04690e9cb3de4f74f58d25d8f8">
+    </attributeMappings>
+    <attributeMappings xmi:id="5166dcddd7e10d2f13ec4e4292b766d0" source="ac79877dbbeb0c82fd680dddda18fa3e" target="68f42c3e50773b32efdbb1247b78beec">
+    </attributeMappings>
+    <attributeMappings xmi:id="ff0ac8410b6153bb33dc62d09c4e0e11" source="7199e2242c415f807ff5d70d4fd1ecdc" target="a57d4db64eecf8ab0db884fda2f1f465">
+    </attributeMappings>
+    <attributeMappings xmi:id="da128f246c5883db9b533231dcc182c7" source="b608aef87aa26a6f06dff02edd5ce9a2" target="c03576d023ef89721e6d82bafaba43fc">
+    </attributeMappings>
+    <attributeMappings xmi:id="48156b579164cb88a1d16b6a4787df2d" source="88e8952d15d1f48d1a2c88ae03208643" target="5b8f5d48d4465097c51146e56883ca33">
+    </attributeMappings>
+    <attributeMappings xmi:id="78fec45f6c33bc5a94df694dc12d36ae" source="e067ab970a371f825664f3a275e4ad2c" target="f8f96e13f9eedf4ae72b69a326c87455">
+    </attributeMappings>
+    <attributeMappings xmi:id="47cb211c19849a6b29d9415ce3262c38" source="ea3e607bb149918baeaa7b22f6d0741c" target="a63700f33ab65f049f33d115699c5d3d">
+    </attributeMappings>
+    <attributeMappings xmi:id="0d2cd61ac394d514cefd2a98074506d6" source="e5c2a54c0139f6fc995d1c418ac5eb2c" target="75e9353e7e53ba5b6c995cd4509da9ff">
+    </attributeMappings>
+    <attributeMappings xmi:id="c7819759ab7842f338e1758dacd58416" source="4a047cd72e1434d6e2423e937457a01c" target="9412068b348dcb9a906abebba60710df">
+    </attributeMappings>
+    <attributeMappings xmi:id="81b7211da90dfd7e40d11b64e772f47d" source="399ebab74cd0adfa0754649260c2defa" target="d85b6a63248c98704411593189fa7ac6">
+    </attributeMappings>
+    <attributeMappings xmi:id="2a4d4fb19b611bc331726fe8cbf05659" source="e6ea1fc6d95691554ae1baa5072282ac" target="57474a22c79b63e788f560fd3e1a7e17">
+    </attributeMappings>
+    <attributeMappings xmi:id="554bf54a632ff6a01f08837bbf2d2d06" source="a12b68bced4f498b0b8d365d43dc80e7" target="ff9ce49ed8938dc100759f468597aee6">
+    </attributeMappings>
+  </tableMappings>
+  <nodes xmi:id="2534cd7e8628cd24143718100a29b12d" name="vt_rdw_gekentekende_voertuigen_brandstof" catalogObjectName="rdw_hana.rdw_db.virtual_tables::vt_rdw_gekentekende_voertuigen_brandstof" type="VIRTUAL_TABLE" xsi:type="flowgraph:DataNode" dataLayout="ROW">
+    <annotations key="sap.afm.layout" xmi:id="af79f8f17b0e125f0f0271fdee1cadf2">
+      <annotations xmi:id="f4aa2daa57feea612ff79379387e3078" key="x" value="12">
+      </annotations>
+      <annotations xmi:id="b6bb4169e6f83f575c86a0d957c0c0fc" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="9a705d3bbf02db980379e389a7419c0b" key="width" value="275.099609375">
+      </annotations>
+      <annotations xmi:id="10a8be0697887041ad8f316ad4d452f3" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="4c923fc4a4bdf22c20a099d4df54bc74" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="3415aaa17da182264266b9bb90e74222" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="9373e8cff54f0e01e97326143ad36b78" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="7f57e4827f5ae117c7b37b8990b182b9" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="56cc01a5020daebcbe7d8319855c08bf" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="d4a238377baa3b24bac6be26f7fd2254" key="columns" value="[{&quot;name&quot;:&quot;kenteken&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;45c33b53787edbbdda9c797be2e569d6&quot;},{&quot;name&quot;:&quot;created_at&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;84268d3c6b880fdb031316c0d4e613c5&quot;},{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;037de55c91671f4ccc3832b82e50ea23&quot;},{&quot;name&quot;:&quot;updated_at&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ad239f1df8134136a7e9913e7c594906&quot;},{&quot;name&quot;:&quot;brandstof_volgnummer&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;d2f89ddf9fdecfdfc46c7b1df09ae489&quot;},{&quot;name&quot;:&quot;brandstof_omschrijving&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f17a7fd942fe57aff3c6263c038e5efc&quot;},{&quot;name&quot;:&quot;brandstofverbruik_buiten_de_stad&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f4632aa539e70b3831402b8e89933cdc&quot;},{&quot;name&quot;:&quot;brandstofverbruik_gecombineerd&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;5ab5e6e7bc105013b9dd2f771c5a05f3&quot;},{&quot;name&quot;:&quot;brandstofverbruik_stad&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;5823cdc1f976cf7649ccefff7ed6a1d0&quot;},{&quot;name&quot;:&quot;co2_uitstoot_gecombineerd&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;d956696197387f2f0abf5bf49d5574a9&quot;},{&quot;name&quot;:&quot;co2_uitstoot_gewogen&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;2d3b608d6ed92286961e47e07d9a4037&quot;},{&quot;name&quot;:&quot;geluidsniveau_rijdend&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;4960fd8a87535db0881d392b99e239d9&quot;},{&quot;name&quot;:&quot;geluidsniveau_stationair&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;621c06cf85050c24f447d83f955d2e6a&quot;},{&quot;name&quot;:&quot;emissieklasse&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;31f41febfe00e15b9bfa913a1b16732f&quot;},{&quot;name&quot;:&quot;milieuklasse_eg_goedkeuring_licht_&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;df4507669b649284413faa07d95f8125&quot;},{&quot;name&quot;:&quot;milieuklasse_eg_goedkeuring_zwaar&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;661e8bb1e29efe26f46ad221cdf44eee&quot;},{&quot;name&quot;:&quot;uitstoot_deeltjes_licht&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;563c4cf3b84cce618c0a7a62524bcab2&quot;},{&quot;name&quot;:&quot;uitstoot_deeltjes_zwaar&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;20732caec90f36d8410aef8d12e4d93a&quot;},{&quot;name&quot;:&quot;nettomaximumvermogen&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;8ee69bf98db1cef44debca927aa8fc93&quot;},{&quot;name&quot;:&quot;nominaal_continu_maximumvermogen&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;b8dab5bc02609f71ec62df465a632de5&quot;},{&quot;name&quot;:&quot;roetuitstoot&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;4fb6265acd053642cc87bfbaec9a69fe&quot;},{&quot;name&quot;:&quot;toerental_geluidsniveau&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;0e3e24d163101b1e6653a1331ec7c545&quot;},{&quot;name&quot;:&quot;emissie_deeltjes_type1_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9a45c3711761691ced0bf744ca81d00c&quot;},{&quot;name&quot;:&quot;emissie_co2_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;288629666365da01bf63f364607af472&quot;},{&quot;name&quot;:&quot;emissie_co2_gewogen_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9ddc56acf79e0d7620dd2c44351d85f1&quot;},{&quot;name&quot;:&quot;brandstof_verbruik_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;7790062235b81adc14e72bb59ecdeaf7&quot;},{&quot;name&quot;:&quot;brandstof_verbruik_gewogen_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;fbed75605658c6a1369f5dc426e36cac&quot;},{&quot;name&quot;:&quot;elektrisch_verbruik_enkel_elektrisch_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;aaa6aefbe625ed354e58cb876a0d51cc&quot;},{&quot;name&quot;:&quot;actie_radius_enkel_elektrisch_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;0d27df4cac8119ec4bbdbc5334e9aa66&quot;},{&quot;name&quot;:&quot;actie_radius_enkel_elektrisch_stad_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;2c13bce14f42ed4598182b6d7873f633&quot;},{&quot;name&quot;:&quot;elektrisch_verbruik_extern_opladen_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;46e82779e8be44f80a52419a84e3b667&quot;},{&quot;name&quot;:&quot;actie_radius_extern_opladen_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;25c23e3be16567d9d646e8732f9aa0bf&quot;},{&quot;name&quot;:&quot;actie_radius_extern_opladen_stad_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;796cb28b6f0a1133deb115cb482d6018&quot;},{&quot;name&quot;:&quot;max_vermogen_15_minuten&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;557c9634cd8db9fef83d9e52e1279ae2&quot;},{&quot;name&quot;:&quot;max_vermogen_60_minuten&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9bee49749f64eb69914ec0d423ec5594&quot;},{&quot;name&quot;:&quot;netto_max_vermogen_elektrisch&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;cbbd70ff764ed70f5eeb248b2428a5ad&quot;},{&quot;name&quot;:&quot;klasse_hybride_elektrisch_voertuig&quot;,&quot;type&quot;:&quot;VARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;7ee9ef0744106e6f6627803b94b15895&quot;}]">
+    </annotations>
+    <annotations xmi:id="d15b5d146ee3978da501bcebcee36d7d" key="sap.im.realtime" value="false">
+    </annotations>
+    <annotations xmi:id="264631b934214d43f3d5dd5b2f554a90" key="sap.im.tableLevelChange" value="false">
+    </annotations>
+    <outputs xmi:id="56c48cdcf3cc7a271e3b49af066df130" name="vt_rdw_gekentekende_voertuigen_brandstof">
+      <attributes xmi:id="45c33b53787edbbdda9c797be2e569d6" name="kenteken" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="84268d3c6b880fdb031316c0d4e613c5" name="created_at" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="037de55c91671f4ccc3832b82e50ea23" name="id" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="ad239f1df8134136a7e9913e7c594906" name="updated_at" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="d2f89ddf9fdecfdfc46c7b1df09ae489" name="brandstof_volgnummer" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="f17a7fd942fe57aff3c6263c038e5efc" name="brandstof_omschrijving" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="f4632aa539e70b3831402b8e89933cdc" name="brandstofverbruik_buiten_de_stad" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="5ab5e6e7bc105013b9dd2f771c5a05f3" name="brandstofverbruik_gecombineerd" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="5823cdc1f976cf7649ccefff7ed6a1d0" name="brandstofverbruik_stad" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="d956696197387f2f0abf5bf49d5574a9" name="co2_uitstoot_gecombineerd" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="2d3b608d6ed92286961e47e07d9a4037" name="co2_uitstoot_gewogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="4960fd8a87535db0881d392b99e239d9" name="geluidsniveau_rijdend" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="621c06cf85050c24f447d83f955d2e6a" name="geluidsniveau_stationair" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="31f41febfe00e15b9bfa913a1b16732f" name="emissieklasse" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="df4507669b649284413faa07d95f8125" name="milieuklasse_eg_goedkeuring_licht_" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="661e8bb1e29efe26f46ad221cdf44eee" name="milieuklasse_eg_goedkeuring_zwaar" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="563c4cf3b84cce618c0a7a62524bcab2" name="uitstoot_deeltjes_licht" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="20732caec90f36d8410aef8d12e4d93a" name="uitstoot_deeltjes_zwaar" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="8ee69bf98db1cef44debca927aa8fc93" name="nettomaximumvermogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="b8dab5bc02609f71ec62df465a632de5" name="nominaal_continu_maximumvermogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="4fb6265acd053642cc87bfbaec9a69fe" name="roetuitstoot" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="0e3e24d163101b1e6653a1331ec7c545" name="toerental_geluidsniveau" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="9a45c3711761691ced0bf744ca81d00c" name="emissie_deeltjes_type1_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="288629666365da01bf63f364607af472" name="emissie_co2_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="9ddc56acf79e0d7620dd2c44351d85f1" name="emissie_co2_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="7790062235b81adc14e72bb59ecdeaf7" name="brandstof_verbruik_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="fbed75605658c6a1369f5dc426e36cac" name="brandstof_verbruik_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="aaa6aefbe625ed354e58cb876a0d51cc" name="elektrisch_verbruik_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="0d27df4cac8119ec4bbdbc5334e9aa66" name="actie_radius_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="2c13bce14f42ed4598182b6d7873f633" name="actie_radius_enkel_elektrisch_stad_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="46e82779e8be44f80a52419a84e3b667" name="elektrisch_verbruik_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="25c23e3be16567d9d646e8732f9aa0bf" name="actie_radius_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="796cb28b6f0a1133deb115cb482d6018" name="actie_radius_extern_opladen_stad_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="557c9634cd8db9fef83d9e52e1279ae2" name="max_vermogen_15_minuten" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="9bee49749f64eb69914ec0d423ec5594" name="max_vermogen_60_minuten" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="cbbd70ff764ed70f5eeb248b2428a5ad" name="netto_max_vermogen_elektrisch" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="7ee9ef0744106e6f6627803b94b15895" name="klasse_hybride_elektrisch_voertuig" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="ab5e0ab6320450bf0cb7392a540069e3" xsi:type="flowgraph:TableComparisonNode" name="TableComparison" compareTableName="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen_brandstof" compareTableType="DATABASE_TABLE" compareTableLayout="COLUMN" detectDeletedRows="true" compareAttributes="6f7962539baa92c7ef764217fb213b34 96eaa3cf9346761d9346c91ac7a61378 8416e5b93c9495215aecee425ec9d491 b23dbe8039c5aba9813fb57db9117b60 3a003375d68425ee5179b07004758e27 109bc734e2634f257119c5086cf29316 85d3615a17b22744e36985dfacc3d7e0 ce7e5ce5f92116b6b27bbbd78203e1f8 83c2910036a72d3dfb655f317c7baa17 36216394ec34f63be2505de524bbc96a 7f4509fb1ec08e3619c36dff6e1f8086 0bfe42a6ac89939476473b5e8ed7395c eb38b7ecb28780f4570bf56c3a6219e4 5aaf74cbe00db20e4813b1c780eddb9a 58a9b8a7fde911c24b72a7b935ebf4ad 3051df2d375edaef6e33e30a1129e530 f9c673c603b34ad95cffcb96c34f8e0e ef9f10cde23c4919c285f6f6262b59d0 5ce5052299b05d861ac29fcd79ea906e 1b77e0bd5f64c4e02d8a742f1a59d4e7 9d074a71f0d412044576d923697ac382 6eb66f64ea1dfda06df139c6b09632d8 40ab3fe215bcdf961db25743fef0a5c7 6df19236585af938b9f17178cdb9007c 09a48bf76b307d078a11be9538755b25 6d210622cce7f801ffeb18f2d518e087 b486b71d923811cde8a977d8739e8bf0 f79a6b8b13855a493794f19389e6bcb9 98748ba59d6a05cfcce8ad90d84f7c6d 28f4ed243f841c2c58b72a2cdd8bc9bd 8800a340abb35c81ec6412370a5665bd 58b7841f7f23c52c316ba15378a15a7d 18935844866941f11e8be36fb6a9edbe 37d64224ab8658df335ee219cb2185a9 bb09441881e0176f832dd21421a46d01 72eb739df18dffedff1e951954beda86 d44d1150bbaef858226355534fc33f83">
+    <annotations key="sap.afm.layout" xmi:id="0dccd08827774a22aef142f7a3bbefa1">
+      <annotations xmi:id="71cb7b1d68dab15f467c2a7fc389c7ba" key="x" value="348.099609375">
+      </annotations>
+      <annotations xmi:id="a37dd1c44bc3ac242c151791b6b390a2" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="382407b52ed67019ae86cffa997cd51f" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="9194e1b63ba281d1f8485e86d98dcfb8" key="height" value="115">
+      </annotations>
+    </annotations>
+    <inputs xmi:id="2e5e9a8202bb053fee6c0d5c945e2f30" name="TableComparison_IN" kind="TABLE">
+      <attributes xmi:id="6f7962539baa92c7ef764217fb213b34" name="kenteken" type="VARCHAR" nullable="true" length="5000">
+        <annotations xmi:id="8b40bbb0d0b4fc35c224431a5c027d05" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="96eaa3cf9346761d9346c91ac7a61378" name="created_at" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="8416e5b93c9495215aecee425ec9d491" name="id" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="b23dbe8039c5aba9813fb57db9117b60" name="updated_at" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="3a003375d68425ee5179b07004758e27" name="brandstof_volgnummer" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="109bc734e2634f257119c5086cf29316" name="brandstof_omschrijving" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="85d3615a17b22744e36985dfacc3d7e0" name="brandstofverbruik_buiten_de_stad" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="ce7e5ce5f92116b6b27bbbd78203e1f8" name="brandstofverbruik_gecombineerd" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="83c2910036a72d3dfb655f317c7baa17" name="brandstofverbruik_stad" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="36216394ec34f63be2505de524bbc96a" name="co2_uitstoot_gecombineerd" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="7f4509fb1ec08e3619c36dff6e1f8086" name="co2_uitstoot_gewogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="0bfe42a6ac89939476473b5e8ed7395c" name="geluidsniveau_rijdend" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="eb38b7ecb28780f4570bf56c3a6219e4" name="geluidsniveau_stationair" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="5aaf74cbe00db20e4813b1c780eddb9a" name="emissieklasse" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="58a9b8a7fde911c24b72a7b935ebf4ad" name="milieuklasse_eg_goedkeuring_licht_" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="3051df2d375edaef6e33e30a1129e530" name="milieuklasse_eg_goedkeuring_zwaar" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="f9c673c603b34ad95cffcb96c34f8e0e" name="uitstoot_deeltjes_licht" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="ef9f10cde23c4919c285f6f6262b59d0" name="uitstoot_deeltjes_zwaar" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="5ce5052299b05d861ac29fcd79ea906e" name="nettomaximumvermogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="1b77e0bd5f64c4e02d8a742f1a59d4e7" name="nominaal_continu_maximumvermogen" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="9d074a71f0d412044576d923697ac382" name="roetuitstoot" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="6eb66f64ea1dfda06df139c6b09632d8" name="toerental_geluidsniveau" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+      <attributes xmi:id="40ab3fe215bcdf961db25743fef0a5c7" name="emissie_deeltjes_type1_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="6df19236585af938b9f17178cdb9007c" name="emissie_co2_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="09a48bf76b307d078a11be9538755b25" name="emissie_co2_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="6d210622cce7f801ffeb18f2d518e087" name="brandstof_verbruik_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="b486b71d923811cde8a977d8739e8bf0" name="brandstof_verbruik_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="f79a6b8b13855a493794f19389e6bcb9" name="elektrisch_verbruik_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="98748ba59d6a05cfcce8ad90d84f7c6d" name="actie_radius_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="28f4ed243f841c2c58b72a2cdd8bc9bd" name="actie_radius_enkel_elektrisch_stad_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="8800a340abb35c81ec6412370a5665bd" name="elektrisch_verbruik_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="58b7841f7f23c52c316ba15378a15a7d" name="actie_radius_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="18935844866941f11e8be36fb6a9edbe" name="actie_radius_extern_opladen_stad_wltp" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="37d64224ab8658df335ee219cb2185a9" name="max_vermogen_15_minuten" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="bb09441881e0176f832dd21421a46d01" name="max_vermogen_60_minuten" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="72eb739df18dffedff1e951954beda86" name="netto_max_vermogen_elektrisch" type="DOUBLE" nullable="true" length="15">
+      </attributes>
+      <attributes xmi:id="d44d1150bbaef858226355534fc33f83" name="klasse_hybride_elektrisch_voertuig" type="VARCHAR" nullable="true" length="5000">
+      </attributes>
+    </inputs>
+    <outputs xmi:id="5319a55c9b1712f33dc82e9b015e1394" name="TableComparison_OUT" kind="TABLE">
+      <attributes xmi:id="c8461a128f9fbeb23408c18422d9aa26" name="kenteken" type="NVARCHAR" nullable="false" mappedName="kenteken" length="6">
+        <annotations xmi:id="f81cdfe2d1da8f3799c77ce1d022fb31" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="df07e85bb488572db4dcda0fd1b0a815" name="created_at" type="TIMESTAMP" nullable="true" mappedName="created_at" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="299423b7e9c76255a8e9633acd0d30e9" name="id" type="NVARCHAR" nullable="true" mappedName="id" length="5000">
+      </attributes>
+      <attributes xmi:id="364af9f19d8476c137f0eb0849e6f9d7" name="updated_at" type="TIMESTAMP" nullable="true" mappedName="updated_at" length="27" scale="7">
+      </attributes>
+      <attributes xmi:id="8a4a66969c37c14fd5bf1f9cfc34350c" name="brandstof_volgnummer" type="INTEGER" nullable="true" mappedName="brandstof_volgnummer" length="10">
+      </attributes>
+      <attributes xmi:id="786744757a633cecc7f37991518455ee" name="brandstof_omschrijving" type="NVARCHAR" nullable="true" mappedName="brandstof_omschrijving" length="128">
+      </attributes>
+      <attributes xmi:id="0df249b6552514799a7e48c264ee879c" name="brandstofverbruik_buiten_de_stad" type="DOUBLE" nullable="true" mappedName="brandstofverbruik_buiten_de_stad" length="15">
+      </attributes>
+      <attributes xmi:id="9460f8eb10c81e4b2c0ab6e057928a35" name="brandstofverbruik_gecombineerd" type="DOUBLE" nullable="true" mappedName="brandstofverbruik_gecombineerd" length="15">
+      </attributes>
+      <attributes xmi:id="99199c7d2b1b88f3efbaf2439f1ccaa0" name="brandstofverbruik_stad" type="DOUBLE" nullable="true" mappedName="brandstofverbruik_stad" length="15">
+      </attributes>
+      <attributes xmi:id="c16ab3d41295d3efcece98e0b69b72b1" name="co2_uitstoot_gecombineerd" type="DOUBLE" nullable="true" mappedName="co2_uitstoot_gecombineerd" length="15">
+      </attributes>
+      <attributes xmi:id="576e98f3e0f5321264f8afd62ac5138c" name="co2_uitstoot_gewogen" type="DOUBLE" nullable="true" mappedName="co2_uitstoot_gewogen" length="15">
+      </attributes>
+      <attributes xmi:id="6d5de7fe3677f113e40d404ece52ef47" name="geluidsniveau_rijdend" type="INTEGER" nullable="true" mappedName="geluidsniveau_rijdend" length="10">
+      </attributes>
+      <attributes xmi:id="68da026eb7dceccce076d21d53951ed1" name="geluidsniveau_stationair" type="INTEGER" nullable="true" mappedName="geluidsniveau_stationair" length="10">
+      </attributes>
+      <attributes xmi:id="898f973a1f199a83fc5aebdda5a6a191" name="emissieklasse" type="NVARCHAR" nullable="true" mappedName="emissieklasse" length="128">
+      </attributes>
+      <attributes xmi:id="9fb1c56dfad32276aa0ac31476a981a4" name="milieuklasse_eg_goedkeuring_licht_" type="NVARCHAR" nullable="true" mappedName="milieuklasse_eg_goedkeuring_licht_" length="128">
+      </attributes>
+      <attributes xmi:id="cf1266e960648be515660788968de577" name="milieuklasse_eg_goedkeuring_zwaar" type="NVARCHAR" nullable="true" mappedName="milieuklasse_eg_goedkeuring_zwaar" length="128">
+      </attributes>
+      <attributes xmi:id="88ccd274d4dd12cd05d2814791d68b0a" name="uitstoot_deeltjes_licht" type="DOUBLE" nullable="true" mappedName="uitstoot_deeltjes_licht" length="15">
+      </attributes>
+      <attributes xmi:id="1609d4e31f60b40f8cd106d4f2b57f5b" name="uitstoot_deeltjes_zwaar" type="DOUBLE" nullable="true" mappedName="uitstoot_deeltjes_zwaar" length="15">
+      </attributes>
+      <attributes xmi:id="00ddee29013791fee3cfdfde835839a2" name="nettomaximumvermogen" type="DOUBLE" nullable="true" mappedName="nettomaximumvermogen" length="15">
+      </attributes>
+      <attributes xmi:id="78d958abd69f6646a6579b0be82217f5" name="nominaal_continu_maximumvermogen" type="DOUBLE" nullable="true" mappedName="nominaal_continu_maximumvermogen" length="15">
+      </attributes>
+      <attributes xmi:id="9718f3bf30e4869186d01a3648426939" name="roetuitstoot" type="DOUBLE" nullable="true" mappedName="roetuitstoot" length="15">
+      </attributes>
+      <attributes xmi:id="b8428a52cf74b4b500c3bd1573eadc6e" name="toerental_geluidsniveau" type="NVARCHAR" nullable="true" mappedName="toerental_geluidsniveau" length="5000">
+      </attributes>
+      <attributes xmi:id="f07b563a8d768b4f1f5e881a46b30c2f" name="emissie_deeltjes_type1_wltp" type="DOUBLE" nullable="true" mappedName="emissie_deeltjes_type1_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="476a7e334d4f2fe4fd1e7b9cd6651c2f" name="emissie_co2_gecombineerd_wltp" type="DOUBLE" nullable="true" mappedName="emissie_co2_gecombineerd_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="8fd73fe643b057bc9749842708921221" name="emissie_co2_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" mappedName="emissie_co2_gewogen_gecombineerd_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="4444506501ccfeba4a886fb188664f58" name="brandstof_verbruik_gecombineerd_wltp" type="DOUBLE" nullable="true" mappedName="brandstof_verbruik_gecombineerd_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="ac79877dbbeb0c82fd680dddda18fa3e" name="brandstof_verbruik_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" mappedName="brandstof_verbruik_gewogen_gecombineerd_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="7199e2242c415f807ff5d70d4fd1ecdc" name="elektrisch_verbruik_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" mappedName="elektrisch_verbruik_enkel_elektrisch_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="b608aef87aa26a6f06dff02edd5ce9a2" name="actie_radius_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" mappedName="actie_radius_enkel_elektrisch_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="88e8952d15d1f48d1a2c88ae03208643" name="actie_radius_enkel_elektrisch_stad_wltp" type="DOUBLE" nullable="true" mappedName="actie_radius_enkel_elektrisch_stad_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="e067ab970a371f825664f3a275e4ad2c" name="elektrisch_verbruik_extern_opladen_wltp" type="DOUBLE" nullable="true" mappedName="elektrisch_verbruik_extern_opladen_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="ea3e607bb149918baeaa7b22f6d0741c" name="actie_radius_extern_opladen_wltp" type="DOUBLE" nullable="true" mappedName="actie_radius_extern_opladen_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="e5c2a54c0139f6fc995d1c418ac5eb2c" name="actie_radius_extern_opladen_stad_wltp" type="DOUBLE" nullable="true" mappedName="actie_radius_extern_opladen_stad_wltp" length="15">
+      </attributes>
+      <attributes xmi:id="4a047cd72e1434d6e2423e937457a01c" name="max_vermogen_15_minuten" type="DOUBLE" nullable="true" mappedName="max_vermogen_15_minuten" length="15">
+      </attributes>
+      <attributes xmi:id="399ebab74cd0adfa0754649260c2defa" name="max_vermogen_60_minuten" type="DOUBLE" nullable="true" mappedName="max_vermogen_60_minuten" length="15">
+      </attributes>
+      <attributes xmi:id="e6ea1fc6d95691554ae1baa5072282ac" name="netto_max_vermogen_elektrisch" type="DOUBLE" nullable="true" mappedName="netto_max_vermogen_elektrisch" length="15">
+      </attributes>
+      <attributes xmi:id="a12b68bced4f498b0b8d365d43dc80e7" name="klasse_hybride_elektrisch_voertuig" type="NVARCHAR" nullable="true" mappedName="klasse_hybride_elektrisch_voertuig" length="128">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="eef1b643529e73dee6683bb79f7a3012" xsi:type="flowgraph:DataNode" name="rdw_gekentekende_voertuigen_brandstof" truncateTable="false" catalogObjectName="rdw_hana.rdw_db.tables::rdw_gekentekende_voertuigen_brandstof" type="DATABASE_TABLE" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="89222472a0e667f83abc30e8d1273ff1">
+      <annotations xmi:id="b7267a549b936fc61f143a5406dcada6" key="x" value="529.099609375">
+      </annotations>
+      <annotations xmi:id="c44d6657f8c2fa1f971e4afbdfe610c5" key="y" value="12">
+      </annotations>
+      <annotations xmi:id="2699a40f893c438789d55a54b5981f43" key="width" value="240.42578125">
+      </annotations>
+      <annotations xmi:id="81c7d1eb7fb2150200cbdb76bcbbe737" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="ad427f3416095eb34742358472ffbe8e" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="aae3c440b0443b539e021ecf2dc550a8" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="598d45d3f506ed479ebd50b92e3535d4" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="00069f79ccdce5fdb85d4a7d48690a58" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="c7897608c1cc002412d5599ed90ab246" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="cd6bbf0867e5f933aef57c27d6e4cf9a" key="columns" value="[{&quot;name&quot;:&quot;kenteken&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:6,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;0966c8ce4ecf2fa0b0ab2ed8431d5397&quot;},{&quot;name&quot;:&quot;created_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;614daf4dd8a8a864dce08fd70df1eec9&quot;},{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;8dbc089bae6669a0c73ae53215c64ea4&quot;},{&quot;name&quot;:&quot;updated_at&quot;,&quot;type&quot;:&quot;TIMESTAMP&quot;,&quot;length&quot;:27,&quot;scale&quot;:7,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;7aa899f7f88cc6e050f633995e86838f&quot;},{&quot;name&quot;:&quot;brandstof_volgnummer&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;060b337fa4e7e244e37037e439dfd062&quot;},{&quot;name&quot;:&quot;brandstof_omschrijving&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:128,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f58664299d629e937ca8dca3a4f9e97d&quot;},{&quot;name&quot;:&quot;brandstofverbruik_buiten_de_stad&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;76b0756af3aa0097408c9a20a58d7680&quot;},{&quot;name&quot;:&quot;brandstofverbruik_gecombineerd&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;58dfed9b825860c6bfcd1a0ac515a882&quot;},{&quot;name&quot;:&quot;brandstofverbruik_stad&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;4722a6a1e6725ebbd687e554a5f1cc5a&quot;},{&quot;name&quot;:&quot;co2_uitstoot_gecombineerd&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;8f1745f9fe2ba0cf6cfeeef3ecc99d14&quot;},{&quot;name&quot;:&quot;co2_uitstoot_gewogen&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;753c9cea809d4fd53a8844586bcfb672&quot;},{&quot;name&quot;:&quot;geluidsniveau_rijdend&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;920239eb14e7ab34c6ab9a590e713abf&quot;},{&quot;name&quot;:&quot;geluidsniveau_stationair&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;6e16e8bf90f0b6f0742cf98e6eb58aab&quot;},{&quot;name&quot;:&quot;emissieklasse&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:128,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;22baaba96929b27346284736efe925d3&quot;},{&quot;name&quot;:&quot;milieuklasse_eg_goedkeuring_licht_&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:128,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f062dd0216170ef5a7fa4dd93d224316&quot;},{&quot;name&quot;:&quot;milieuklasse_eg_goedkeuring_zwaar&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:128,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;641efa7e8ce1882ef7eb184b682c538f&quot;},{&quot;name&quot;:&quot;uitstoot_deeltjes_licht&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;479969d7fbd1bf7021559ff7bafc0167&quot;},{&quot;name&quot;:&quot;uitstoot_deeltjes_zwaar&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;23e3576792af637864bf0d5155333b96&quot;},{&quot;name&quot;:&quot;nettomaximumvermogen&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;e23379b0fb20fd2d72a39f6d8b99148f&quot;},{&quot;name&quot;:&quot;nominaal_continu_maximumvermogen&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f001e3e02ca028b0dcba395ea48b8da7&quot;},{&quot;name&quot;:&quot;roetuitstoot&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f9372b1955ea6bdba8950bf1000ae54c&quot;},{&quot;name&quot;:&quot;toerental_geluidsniveau&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:5000,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9851e0ce79c3751bd236f7946ae96ea4&quot;},{&quot;name&quot;:&quot;emissie_deeltjes_type1_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;3d3e5363f243e492426565912fbdfd75&quot;},{&quot;name&quot;:&quot;emissie_co2_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;e180737b83e95bdbc8f82c7bdfc9b19b&quot;},{&quot;name&quot;:&quot;emissie_co2_gewogen_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;e1fd258bb78e8a73e3b791d80ee7d412&quot;},{&quot;name&quot;:&quot;brandstof_verbruik_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;874f8b04690e9cb3de4f74f58d25d8f8&quot;},{&quot;name&quot;:&quot;brandstof_verbruik_gewogen_gecombineerd_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;68f42c3e50773b32efdbb1247b78beec&quot;},{&quot;name&quot;:&quot;elektrisch_verbruik_enkel_elektrisch_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;a57d4db64eecf8ab0db884fda2f1f465&quot;},{&quot;name&quot;:&quot;actie_radius_enkel_elektrisch_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;c03576d023ef89721e6d82bafaba43fc&quot;},{&quot;name&quot;:&quot;actie_radius_enkel_elektrisch_stad_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;5b8f5d48d4465097c51146e56883ca33&quot;},{&quot;name&quot;:&quot;elektrisch_verbruik_extern_opladen_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;f8f96e13f9eedf4ae72b69a326c87455&quot;},{&quot;name&quot;:&quot;actie_radius_extern_opladen_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;a63700f33ab65f049f33d115699c5d3d&quot;},{&quot;name&quot;:&quot;actie_radius_extern_opladen_stad_wltp&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;75e9353e7e53ba5b6c995cd4509da9ff&quot;},{&quot;name&quot;:&quot;max_vermogen_15_minuten&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;9412068b348dcb9a906abebba60710df&quot;},{&quot;name&quot;:&quot;max_vermogen_60_minuten&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;d85b6a63248c98704411593189fa7ac6&quot;},{&quot;name&quot;:&quot;netto_max_vermogen_elektrisch&quot;,&quot;type&quot;:&quot;DOUBLE&quot;,&quot;length&quot;:15,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;57474a22c79b63e788f560fd3e1a7e17&quot;},{&quot;name&quot;:&quot;klasse_hybride_elektrisch_voertuig&quot;,&quot;type&quot;:&quot;NVARCHAR&quot;,&quot;length&quot;:128,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ff9ce49ed8938dc100759f468597aee6&quot;}]">
+    </annotations>
+    <inputs xmi:id="36460ab75f5bf02bd21d9505539af8e7" name="rdw_gekentekende_voertuigen_brandstof" kind="TABLE">
+      <attributes xmi:id="0966c8ce4ecf2fa0b0ab2ed8431d5397" name="kenteken" type="NVARCHAR" nullable="false" length="6">
+        <annotations xmi:id="eba18037cd4476f4dad0967a74eecc10" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="614daf4dd8a8a864dce08fd70df1eec9" name="created_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+        <annotations xmi:id="9eb8c0e7286f5dab88f0ab80f9d9a285" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="8dbc089bae6669a0c73ae53215c64ea4" name="id" type="NVARCHAR" nullable="true" length="5000">
+        <annotations xmi:id="a45ba5d702b8f365609bcfd0f28f5beb" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="7aa899f7f88cc6e050f633995e86838f" name="updated_at" type="TIMESTAMP" nullable="true" length="27" scale="7">
+        <annotations xmi:id="1107bf6880a4c1594260ccbd15cfab95" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="060b337fa4e7e244e37037e439dfd062" name="brandstof_volgnummer" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="5f43fe276cf65b2b11774c2f7a5dc346" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f58664299d629e937ca8dca3a4f9e97d" name="brandstof_omschrijving" type="NVARCHAR" nullable="true" length="128">
+        <annotations xmi:id="f16442040754f318d2fa23d3f8140433" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="76b0756af3aa0097408c9a20a58d7680" name="brandstofverbruik_buiten_de_stad" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="f81ca4bf72314a24d2ebb931eed7572d" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="58dfed9b825860c6bfcd1a0ac515a882" name="brandstofverbruik_gecombineerd" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="6cae6585eb06148f9ba4a195442778c6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="4722a6a1e6725ebbd687e554a5f1cc5a" name="brandstofverbruik_stad" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="76b0ac1023d6e5870811849b14a7d4c6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="8f1745f9fe2ba0cf6cfeeef3ecc99d14" name="co2_uitstoot_gecombineerd" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="ebda4ece0520302c7a523f6090dcca38" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="753c9cea809d4fd53a8844586bcfb672" name="co2_uitstoot_gewogen" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="f85e2503f1f5a741cc99090eae49baa6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="920239eb14e7ab34c6ab9a590e713abf" name="geluidsniveau_rijdend" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="2d66ede906e7d02a102d9ce1c6aaf426" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6e16e8bf90f0b6f0742cf98e6eb58aab" name="geluidsniveau_stationair" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="7f506a0bdca335858bf105b18dd861a4" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="22baaba96929b27346284736efe925d3" name="emissieklasse" type="NVARCHAR" nullable="true" length="128">
+        <annotations xmi:id="0c16d18abca43144650a36c8e5e070a1" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f062dd0216170ef5a7fa4dd93d224316" name="milieuklasse_eg_goedkeuring_licht_" type="NVARCHAR" nullable="true" length="128">
+        <annotations xmi:id="269efbaf35541781341641aa2540de62" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="641efa7e8ce1882ef7eb184b682c538f" name="milieuklasse_eg_goedkeuring_zwaar" type="NVARCHAR" nullable="true" length="128">
+        <annotations xmi:id="e6d07e531249826ffb5e3f26f4455466" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="479969d7fbd1bf7021559ff7bafc0167" name="uitstoot_deeltjes_licht" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="64f3323530e51a24484d5507ba59edf9" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="23e3576792af637864bf0d5155333b96" name="uitstoot_deeltjes_zwaar" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="75f6e7015710a37ea60836336cdffbba" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e23379b0fb20fd2d72a39f6d8b99148f" name="nettomaximumvermogen" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="3a3352d1c797fb0da5c96238fe876663" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f001e3e02ca028b0dcba395ea48b8da7" name="nominaal_continu_maximumvermogen" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="a055a0ae724215f1fd550679cbb554c8" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f9372b1955ea6bdba8950bf1000ae54c" name="roetuitstoot" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="875d4276aa64da3540d045c1c960de94" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9851e0ce79c3751bd236f7946ae96ea4" name="toerental_geluidsniveau" type="NVARCHAR" nullable="true" length="5000">
+        <annotations xmi:id="1eaa7208d85790826290446362e2677b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="3d3e5363f243e492426565912fbdfd75" name="emissie_deeltjes_type1_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="175623616e672d4e5217c73c1fcdcc09" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e180737b83e95bdbc8f82c7bdfc9b19b" name="emissie_co2_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="a623731d1709dfa36c3153529fcccada" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e1fd258bb78e8a73e3b791d80ee7d412" name="emissie_co2_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="c3a01242582d2d7417fde9957171c734" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="874f8b04690e9cb3de4f74f58d25d8f8" name="brandstof_verbruik_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="f405cc4bf6dfa1573cff37cf366b8b26" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="68f42c3e50773b32efdbb1247b78beec" name="brandstof_verbruik_gewogen_gecombineerd_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="2abf62f95f8568a3383e1631940778a0" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a57d4db64eecf8ab0db884fda2f1f465" name="elektrisch_verbruik_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="2b276d717594c3469d194f27d0e02ff6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="c03576d023ef89721e6d82bafaba43fc" name="actie_radius_enkel_elektrisch_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="6362f34767c3a42270db4c1e054c68e4" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="5b8f5d48d4465097c51146e56883ca33" name="actie_radius_enkel_elektrisch_stad_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="0fff14ab8a2b33a02398252763aa5256" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="f8f96e13f9eedf4ae72b69a326c87455" name="elektrisch_verbruik_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="c8faaaad9ecc9002427e9c5f119b6c73" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="a63700f33ab65f049f33d115699c5d3d" name="actie_radius_extern_opladen_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="3b7c1d39bff485f595aae414ec2d624a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="75e9353e7e53ba5b6c995cd4509da9ff" name="actie_radius_extern_opladen_stad_wltp" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="d835deeffff262715bbcf9a8b505b25a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="9412068b348dcb9a906abebba60710df" name="max_vermogen_15_minuten" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="1124149c69ad6cf5331a91483e3bd2aa" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="d85b6a63248c98704411593189fa7ac6" name="max_vermogen_60_minuten" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="4a6dcc5f97c498a363948304ef4a4614" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="57474a22c79b63e788f560fd3e1a7e17" name="netto_max_vermogen_elektrisch" type="DOUBLE" nullable="true" length="15">
+        <annotations xmi:id="b42b3de66f13daf0801e3ae89ededdba" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ff9ce49ed8938dc100759f468597aee6" name="klasse_hybride_elektrisch_voertuig" type="NVARCHAR" nullable="true" length="128">
+        <annotations xmi:id="75fe9b25b1cde69142fd86328f123ab2" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+</flowgraph:ContainerNode>
